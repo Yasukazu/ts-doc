@@ -1,0 +1,17 @@
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+}
+h1 {
+    text-align: center;
+}
+nav {
+    display: flex;
+}
