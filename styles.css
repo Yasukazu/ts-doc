@@ -37,3 +37,12 @@ nav > h2 {
         width: 100%;
     }
 }
+code {
+    background-color: black;
+    color: yellow;
+    padding: 2em;
+    margin: 2em;
+}
+article p {
+    margin: 2em 1em 2em 1em;
+}
