@@ -1,9 +1,3 @@
-/* us-15 */
-@media (prefers-reduced-motion: no-preference) {
-    * {
-      scroll-behavior: smooth;
-    }
-}
 *, *:before, *:after {
     box-sizing: inherit;
 }
@@ -14,10 +8,11 @@ h1 {
     text-align: center;
 }
 nav {
-    /* us-14 */
-    display: flex;
+    display: flex; /* us-14 */
+    flex-direction: row;
     justify-content: space-evenly;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    /* overflow: hidden; */
     align-items: center;
     padding-inline-start: 0;
     margin-block: 0;
@@ -25,9 +20,20 @@ nav {
     border-color: gray;
 }
 nav > h2 {
+    width: 20%;
+    float: left;
     display: block;
     border-width: 2px;
     border-color: gray;
     padding: 0.5rem;
     margin: 1rem;
+}
+/* us-15 */
+@media screen and (max-width: 800px) {
+    nav > h2 {
+        /* float: none; */
+      flex-direction: column;
+        /* flex-wrap: nowrap; */
+        width: 100%;
+    }
 }
