@@ -108,6 +108,12 @@ code {
     padding: 2em;
     margin: 2em;
 }
+pre > code {
+    background-color: black;
+    color: yellow;
+    padding: 2em;
+    margin: 2em;
+}
 article p {
     margin: 1em 1em 2em 3em;
 }
