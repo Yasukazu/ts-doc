@@ -28,6 +28,9 @@ nav > h2 {
     padding: 0.5rem;
     margin: 1rem;
 }
+section > h2 {
+    margin-top: 3em;
+}
 /* us-15 */
 @media screen and (max-width: 800px) {
     nav > h2 {
@@ -61,6 +64,6 @@ footer {
     border-color: blue;
     margin: 1em;
 }
-footer p {
-    display: inline-block;
+footer label {
+    display: block;
 }
