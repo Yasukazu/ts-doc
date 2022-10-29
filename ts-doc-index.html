@@ -3,21 +3,21 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <mata charset="utf-8">
-    <title>Document operation between HTML and Javascript</title>
+    <title>HTML Document manupulation between by Javascript</title>
     <link rel="stylesheet" href="./styles.css">
   </head>
   <script type="text/Javascript" src="./out/app.js" defer></script>
-  <body>
+  <body><div class="row">
     <header>
-      <h1>Javascript Web(HTML) API</h1>
+      <h1>JS DOM API</h1>
     <!-- us-8 -->
     <nav id="navbar">
         <!-- us-10, us-11, us-12, us-13 -->
-        <h2><a href="#win-nav-doc" class="nav-link">Window, Navigator and Document</a></h2>
-        <h2><a href="#doc-obj-mod" class="nav-link">Document Opject Model</a></h2>
-        <h2><a href="#dom-example" class="nav-link">Basic DOM operation example</a></h2>
-        <h2><a href="#shopping-example" class="nav-link">Dynamic shopping h2 example</a></li>
-        <h2><a href="#summary" class="nav-link">Summary</a></h2>
+        <a href="#win-nav-doc" class="nav-link">Window, Navigator and Document</a>
+        <a href="#doc-obj-mod" class="nav-link">Document Opject Model</a>
+        <a href="#dom-example" class="nav-link">Basic DOM operation example</a>
+        <a href="#shopping-example" class="nav-link">Dynamic shopping h2 example</a>
+        <a href="#summary" class="nav-link">Summary</a>
     </nav>
   </header>
   <!-- us-1 -->
@@ -28,25 +28,27 @@
         <h2>Window, Navigator and Document</h2>
         <!-- us-5(p) -->
         <p>Javascript can read and write HTML <strong>Document</strong>.  And also get information about the <strong>Window</strong> rendered by the web browser.  And also information about the web browser itself(<strong>Navigator</strong>)</p>
+            <article>
+            <h3>Document interface:</h3>
         <ul>
           <!-- us-7(5 li) -->
           <li>
-            <article>
-            <h3>Document</h3>
               <h4>Read from Document:</h4>
               <p>Javascript can get a certain location in the document like this:</p>
               <code>
                 const win_nav_docObj = document.querySelector('#win-nav-doc');
               </code>
+              </li>
+          <li>
               <h4>Write into Document:</h4>
               <p>Javascript can write into the document like this:</p>
               <code>
                 const_win_nav_docObj.textContent = 'The Replaced text';
               </code>
+              </li>
+              </ul>
               <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">HTMLElement</a> in MDN web docs</aside>
             </article>
-          </li>
-          <li>
             <article>
               <h3>Window</h3>
               <h4>Read viewport width</h4>
@@ -54,15 +56,17 @@
               <code>let viewportWidth = window.innerWidth;</code>
               <aside>Replace 'innerWidth' with 'innerHeight' to get the height.</aside>
             </article>
+            </li>
+            <li>
             <article>
               <h3>Navigator</h3>
+                <p>Supported Javascript version depends on <strong>Navigator</strong> / aka: 'user agent' / aka: 'web browser'(like: <em>Firefox</em>, <em>Chrome</em>, <em>Edge</em>, <em>Safari</em>)).</p>
+                <p>Precise appearance and dynamic parts of a web page need to be configured according to the navigator. </p>
+        <code> const userAgent = window.navigator.userAgent;</code>
             </article>
           </li>
-          <li></li>
         </ul>
         <!-- us-6 -->
-        <code></code>
-        <p></p>
       </section>
       <section  id="doc-obj-mod" class="main-section">
         <h2>Document Opject Model</h2>
@@ -77,16 +81,22 @@
         <h2>Summary</h2>
       </section>
     </main>
+    </div>
     <footer><p>This webpage is cited from:
       <cite><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">MDN|Learn/JavaScript/Client-side web APIs/Manupulating documents</a></cite></p>
-      <div>Viewport width: 
-      <p class="script-write" id="viewport-width"></p></div>
-
+      <div class="script-write">
+      <label>Viewport width: 
+      <p class="script-write" id="viewport-width"></p></label>
+      <label>User agent: <p class="script-write" id="user-agent"></p>
+      </label></div>
     </footer>
   </body>
   <script>
     let viewportWidth = window.innerWidth;
     const win_nav_docObj = document.querySelector('#viewport-width');
     win_nav_docObj.textContent = `${viewportWidth}`;
+    const userAgent = window.navigator.userAgent;
+    const userAgent_docObj = document.querySelector('#user-agent');
+    userAgent_docObj.textContent = `${userAgent}`;
   </script>
 </html>
