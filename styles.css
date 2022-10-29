@@ -1,3 +1,4 @@
+/* us-15 */
 @media (prefers-reduced-motion: no-preference) {
     * {
       scroll-behavior: smooth;
@@ -13,8 +14,7 @@ h1 {
     text-align: center;
 }
 nav {
-}
-nav > ul {
+    /* us-14 */
     display: flex;
     justify-content: space-evenly;
     flex-wrap: nowrap;
@@ -24,7 +24,7 @@ nav > ul {
     border-width: 2px;
     border-color: gray;
 }
-nav > ul > li {
+nav > h2 {
     display: block;
     border-width: 2px;
     border-color: gray;
