@@ -16,7 +16,7 @@
         <a href="#win-nav-doc" class="nav-link">Window, Navigator and Document</a>
         <a href="#doc-obj-mod" class="nav-link">Document Opject Model</a>
         <a href="#dom-example" class="nav-link">Basic DOM operation example</a>
-        <a href="#shopping-example" class="nav-link">Dynamic shopping h2 example</a>
+        <a href="#event-example" class="nav-link">Event modification example</a>
         <a href="#summary" class="nav-link">Summary</a>
     </nav>
   </header>
@@ -100,8 +100,19 @@
       </code> </article> </li>
         </ul></article>
       </section>
-      <section  id="shopping-example" class="main-section">
-        <h2>Dynamic shopping list example</h2>
+      <section  id="event-example" class="main-section">
+        <h2>Event modification example</h2>
+        <article>
+          <p>Assigns an event handler to the DOM object:</p>
+          <p>(HTML):</p>
+          <code>&lt;input id="btn_elem" type="button" value="Click me"&gt;</code>
+          <p>(script):</p>
+            <code>
+              btn_elem.onclick = function() {
+                alert('Thank you');
+              };
+          </code>
+        </article>
       </section>
       <section  id="summary" class="main-section">
         <h2>Summary</h2>
