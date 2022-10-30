@@ -84,8 +84,10 @@ header h1 {
     border: 0.5px  solid black;
 }
 
-section > h2 {
-    margin-top: 3em;
+section h2 {
+    display: block;
+    margin: -1rem 0rem -1rem 2rem;
+    padding: 1rem 0rem 1rem 2rem;
 }
 /* us-15 */
 @media screen and (max-width: 800px) {
@@ -97,10 +99,20 @@ section > h2 {
     }
 }
 article h3 {
-    margin: 3em 1em 1em 1em;
+    display: block;
+    margin: 3rem 1rem 1rem 1rem;
 }
 article h4 {
     margin: 3em 1em 0em 2em;
+}
+
+article ul {
+    margin: 0;
+    padding: 0;
+}
+article li {
+    margin: 0;
+    padding: 0;
 }
 article pre {
     display: block;
@@ -114,10 +126,10 @@ code {
     background-color: black;
     color: yellow;
     padding: 1em  1em;
-    margin: 3em 0 3em 3em;
+    margin: 1em 0 1em 3em;
 }
 article p {
-    margin: 1em 1em 2em 3em;
+    margin: 1em 1em 1em 3em;
 }
 article aside {
     margin: 2rem 1rem 1rem 1rem;
@@ -125,13 +137,10 @@ article aside {
 }
 article label {
     display: block;
-    margin-top: 3rem;
-}
-article h4 {
-    margin-bottom: 2rem;
+    margin-top: 1rem;
 }
 article div {
-    margin-top: 2rem;
+    margin-top: 2em;
 }
 #event-div {
     display: flex;

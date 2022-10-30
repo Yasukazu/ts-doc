@@ -34,7 +34,7 @@
           <!-- us-7(5 li) -->
           <li>
               <h4>Read from Document:</h4>
-              <p>Javascript can get a certain location in the document like this:</p>
+              <p>Javascript can get a certain location in the document using CSS selector:</p>
               <code>
                 const win_nav_docObj = document.querySelector('#win-nav-doc');
               </code>
@@ -126,7 +126,11 @@
       </section>
       <section  id="summary" class="main-section">
         <h2>Summary</h2>
-      </section>
+        <article>
+          <h3>Recommended interface:</h3>
+        <p>Use <strong>querySelector</strong> to fetch a node/element in the document, do not use 'id' object directry.  The benefit is: no need to change CSS naming convention as "hypen connected" to "underbar connected".</p>
+      </article>
+    </section>
     </main>
     </div>
     <footer>
