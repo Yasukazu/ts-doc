@@ -102,17 +102,19 @@ article h3 {
 article h4 {
     margin: 3em 1em 0em 2em;
 }
-code {
+article pre {
+    display: block;
     background-color: black;
     color: yellow;
-    padding: 2em;
-    margin: 3em;
+    margin: -1rem 1rem;
+    padding: 1rem;
 }
-pre > code {
+code {
+    display: inline-block;
     background-color: black;
     color: yellow;
-    padding: 2em;
-    margin: 2em;
+    padding: 1em  1em;
+    margin: 3em 0 3em 3em;
 }
 article p {
     margin: 1em 1em 2em 3em;
@@ -130,6 +132,14 @@ article h4 {
 }
 article div {
     margin-top: 2rem;
+}
+#event-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    width: 8rem;
+    height: 4rem;
 }
 footer {
     border-width: 1px;

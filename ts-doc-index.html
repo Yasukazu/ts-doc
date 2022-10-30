@@ -111,13 +111,17 @@
           <label>(HTML):
           <code>&lt;input id="btn_elem" type="button" value="Click me"&gt;</code></label>
           <label>(script):
-            <code>
+            <code>const btn_elem = document.querySelector("#btn-elem");
+    const event_org_txt = event_divObj.textContent;
+               let btn_counter = 0;
               btn_elem.onclick = function() {
-                alert('Thank you');
-              };
+                btn_counter += 1;
+                event_divObj.textContent = `${event_org_txt} + ${btn_counter}`;
+              }
           </code></label> 
+          <div id="event-div">Event</div>
           <label >
-          <input id="btn_elem" type="button" value="Click me"> <- If you click this button, a dialogue window might appear, then click "Ok" button of the window, please. </label>
+          <input id="btn-elem" type="button" value="Click me"> <- If you click this button, then above area text becomes added [ + click-count]. </label>
         </article>
       </section>
       <section  id="summary" class="main-section">
@@ -147,7 +151,15 @@
     const userLanguage = window.navigator.language;
     const userLanguage_docObj = document.querySelector('#user-language');
     userLanguage_docObj.textContent = `${userLanguage}`;
-    btn_elem.onclick = function() { alert('Thank you clicking "Click me"!'); };
+    const event_divObj = document.querySelector('#event-div');
+    const event_org_txt = event_divObj.textContent;
+    const btn_elem = document.querySelector("#btn-elem");
+    let btn_counter = 0;
+              btn_elem.onclick = function() {
+                btn_counter += 1;
+                event_divObj.textContent = `${event_org_txt} + ${btn_counter}`;
+              }
     </script>
+    <!-- btn_elem.onclick = function() { alert('Thank you clicking "Click me"!'); };-->
   </body>
 </html>
