@@ -86,18 +86,22 @@
       </section>
       <section  id="dom-example" class="main-section">
         <h2>Basic DOM operation example</h2>
+        <article>
+          <h3>Create / Append / Move / Remove a node</h3>
         <ul>
-        <li><article><h3>Creates an element</h3>
-          <p>Creates a new element node with a tag:</p>
+          <li><h4>Creates a new element node with a tag:</h4>
           <code>let divElem = document.createElement('div');</code></li>
-        <li><article><h3></h3>
-        <p>Modify the element </p>
+        <li> <h4>Modify the element:</h4>
       <code>divElem.className = "greeting";
-        divElem.innerHTML = "<strong>He-lo</strong>, What's going on here?";</code>
-        <p>Append the element into the document:</p>
+        divElem.innerHTML = "<strong>He-lo</strong>, What's going on here?";</code></li>
+        <li> <h4>Append the element into the document:</h4>
         <code>
         document.body.append(divElem);
-      </code> </article> </li>
+      </code></li>
+      <div>
+      <aside>Append the element node to other location cause 'move', resulting old position one is automatically removed.  If neeed to duplicate the element node, use <strong>cloneNode(<em>bool</em>)</strong> method.  If the <strong><em>bool</em></strong> is true then deep copy else no child copy.  In case to remove the element node, use <strong>remove()</strong> method of the node itself.</aside>
+     </div>
+     </li>
         </ul></article>
       </section>
       <section  id="event-example" class="main-section">
@@ -112,6 +116,8 @@
                 alert('Thank you');
               };
           </code>
+          <label >
+          <input id="btn_elem" type="button" value="Click me"> <- If you click this button, a dialogue window might appear, then click "Ok" button of the window, please. </label>
         </article>
       </section>
       <section  id="summary" class="main-section">
@@ -141,6 +147,7 @@
     const userLanguage = window.navigator.language;
     const userLanguage_docObj = document.querySelector('#user-language');
     userLanguage_docObj.textContent = `${userLanguage}`;
+    btn_elem.onclick = function() { alert('Thank you clicking "Click me"!'); };
     </script>
   </body>
 </html>

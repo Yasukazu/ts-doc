@@ -121,6 +121,12 @@ article aside {
     margin: 2rem 1rem 1rem 1rem;
     font-style: italic;
 }
+article h4 {
+    margin-bottom: 2rem;
+}
+article div {
+    margin-top: 2rem;
+}
 footer {
     border-width: 1px;
     border-color: blue;
