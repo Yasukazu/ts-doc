@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <mata charset="utf-8">
-    <title>HTML Document manupulation between by Javascript</title>
+    <title>HTML Document manipulation by Javascript</title>
     <link rel="stylesheet" href="./styles.css">
   </head>
   <script type="text/Javascript" src="./out/app.js" defer></script>
@@ -94,16 +94,19 @@
       </section>
     </main>
     </div>
-    <footer><p>This webpage is cited from:
-      <cite><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">MDN|Learn/JavaScript/Client-side web APIs/Manupulating documents</a></cite></p>
+    <footer>
+      <p>This webpage is cited from:
+      <cite><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">MDN|Learn/JavaScript/Client-side web APIs/Manipulating documents</a></cite></p>
+      <p>Also from: 
+        <cite><a href="https://javascript.info/document">JAVASCRIPT.INFO|Document|.. learn to manipulate a web-page using Javascript.</a></cite>
+      </p>
       <div class="script-write">
       <label>Viewport width: <p class="script-write" id="viewport-width"></p></label>
       <label>User agent: <p class="script-write" id="user-agent"></p> </label>
       <label>User language: <p class="script-write" id="user-language"></p> </label>
     </div>
     </footer>
-  </body>
-  <script>
+    <script>
     let viewportWidth = window.innerWidth;
     const win_nav_docObj = document.querySelector('#viewport-width');
     win_nav_docObj.textContent = `${viewportWidth}`;
@@ -113,5 +116,6 @@
     const userLanguage = window.navigator.language;
     const userLanguage_docObj = document.querySelector('#user-language');
     userLanguage_docObj.textContent = `${userLanguage}`;
-  </script>
+    </script>
+  </body>
 </html>
