@@ -98,24 +98,24 @@
         <code>
         document.body.append(divElem);
       </code></li>
+      </ul>
       <div>
       <aside>Append the element node to other location cause 'move', resulting old position one is automatically removed.  If neeed to duplicate the element node, use <strong>cloneNode(<em>bool</em>)</strong> method.  If the <strong><em>bool</em></strong> is true then deep copy else no child copy.  In case to remove the element node, use <strong>remove()</strong> method of the node itself.</aside>
      </div>
-     </li>
-        </ul></article>
+        </article>
       </section>
       <section  id="event-example" class="main-section">
         <h2>Event modification example</h2>
         <article>
           <p>Assigns an event handler to the DOM object:</p>
-          <p>(HTML):</p>
-          <code>&lt;input id="btn_elem" type="button" value="Click me"&gt;</code>
-          <p>(script):</p>
+          <label>(HTML):
+          <code>&lt;input id="btn_elem" type="button" value="Click me"&gt;</code></label>
+          <label>(script):
             <code>
               btn_elem.onclick = function() {
                 alert('Thank you');
               };
-          </code>
+          </code></label> 
           <label >
           <input id="btn_elem" type="button" value="Click me"> <- If you click this button, a dialogue window might appear, then click "Ok" button of the window, please. </label>
         </article>

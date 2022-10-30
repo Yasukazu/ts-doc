@@ -121,6 +121,10 @@ article aside {
     margin: 2rem 1rem 1rem 1rem;
     font-style: italic;
 }
+article label {
+    display: block;
+    margin-top: 3rem;
+}
 article h4 {
     margin-bottom: 2rem;
 }
