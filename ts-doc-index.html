@@ -86,10 +86,19 @@
       </section>
       <section  id="dom-example" class="main-section">
         <h2>Basic DOM operation example</h2>
-        <article><h3>Creates an element</h3>
+        <ul>
+        <li><article><h3>Creates an element</h3>
           <p>Creates a new element node with a tag:</p>
-          <code>let divElem = document.createElement('div');</code>
-        </article>
+          <code>let divElem = document.createElement('div');</code></li>
+        <li><article><h3></h3>
+        <p>Modify the element </p>
+      <code>divElem.className = "greeting";
+        divElem.innerHTML = "<strong>He-lo</strong>, What's going on here?";</code>
+        <p>Append the element into the document:</p>
+        <code>
+        document.body.append(divElem);
+      </code> </article> </li>
+        </ul></article>
       </section>
       <section  id="shopping-example" class="main-section">
         <h2>Dynamic shopping list example</h2>
