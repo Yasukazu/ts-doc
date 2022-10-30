@@ -59,15 +59,25 @@
                 <p>To get the height into a variable 'viewportHeight' as int:</p>
                 <pre><code>let viewportHeight = window.innerHeight;</code></pre></li>
               </ul>
-              <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window</a> interface in MDN web docs</aside>
-            </article>
+              <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window</a> interface in MDN web docs)</aside>
             </article>
             <article>
-              <h3>Navigator</h3>
-                <p>Supported Javascript version depends on <strong>Navigator</strong> / aka: 'user agent' / aka: 'web browser'(like: <em>Firefox</em>, <em>Chrome</em>, <em>Edge</em>, <em>Safari</em>)).</p>
-                <p>Precise appearance and dynamic parts of a web page need to be configured according to the navigator. </p>
-        <code> const userAgent = window.navigator.userAgent;</code>
-            </article>
+              <h3>Navigator interface:</h3>
+               <ul>
+                <li>
+                  <h4>User agent:</h4>
+                <p>Supported Javascript version depends on <strong>'user agent'</strong> that is 'web browser'(like: <em>Firefox</em>, <em>Chrome</em>, <em>Edge</em>, <em>Safari</em>)).</p>
+                <p>Ever before, the precise appearance needed to be configured according to the browser rendering engine.  Following code gets 'user agent'(web browser) as a string(text):</p>
+        <code>const userAgent = window.navigator.userAgent;</code>
+      </li>
+                <li>
+                  <h4>User language:</h4>
+                  <p>The language of browser user interface is useful to match with webpage language.</p>
+        <code>const userLanguage = window.navigator.language;</code>
+        <aside>Language tag before hyphen is like: <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>(<em>Wikipedia</em>)</aside>
+                </li>
+            </ul>
+          </article>
         <!-- us-6 -->
       </section>
       <section  id="doc-obj-mod" class="main-section">
@@ -87,10 +97,10 @@
     <footer><p>This webpage is cited from:
       <cite><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">MDN|Learn/JavaScript/Client-side web APIs/Manupulating documents</a></cite></p>
       <div class="script-write">
-      <label>Viewport width: 
-      <p class="script-write" id="viewport-width"></p></label>
-      <label>User agent: <p class="script-write" id="user-agent"></p>
-      </label></div>
+      <label>Viewport width: <p class="script-write" id="viewport-width"></p></label>
+      <label>User agent: <p class="script-write" id="user-agent"></p> </label>
+      <label>User language: <p class="script-write" id="user-language"></p> </label>
+    </div>
     </footer>
   </body>
   <script>
@@ -100,5 +110,8 @@
     const userAgent = window.navigator.userAgent;
     const userAgent_docObj = document.querySelector('#user-agent');
     userAgent_docObj.textContent = `${userAgent}`;
+    const userLanguage = window.navigator.language;
+    const userLanguage_docObj = document.querySelector('#user-language');
+    userLanguage_docObj.textContent = `${userLanguage}`;
   </script>
 </html>
