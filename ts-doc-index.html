@@ -8,88 +8,95 @@
   </head>
   <script type="text/Javascript" src="./out/app.js" defer></script>
   <body><div class="row">
-    <header>
-      <h1>JS DOM API</h1>
-    <!-- us-8 -->
+    
     <nav id="navbar">
-        <!-- us-10, us-11, us-12, us-13 -->
-        <a href="#Window_Navigator_Document" class="nav-link">Window, Navigator and Document</a>
+      <h1>JS DOM API</h1>
+        <a href="#Document_Window_Navigator" class="nav-link">Document Window Navigator</a>
         <a href="#Document_Object_Model" class="nav-link">Document Opject Model</a>
         <a href="#Basic_DOM_operation" class="nav-link">Basic DOM operation</a>
-        <a href="#Event_modification" class="nav-link">Event modification</a>
+        <a href="#Event_customization" class="nav-link">Event customization</a>
         <a href="#Summary" class="nav-link">Summary</a>
     </nav>
-  </header>
-  <!-- us-1 -->
     <main id="main-doc">
-      <!-- us-2(class), us-4(id) -->
-      <section  id="Window_Navigator_Document" class="main-section">
-        <!-- us-3 -->
-        <h2>Window Navigator Document</h2>
-        <!-- us-5(p) -->
-        <p>Javascript can read and write HTML <strong>Document</strong>.  And also get information about the <strong>Window</strong> rendered by the web browser.  And also information about the web browser itself(<strong>Navigator</strong>)</p>
-            <article>
-            <h3>Document interface:</h3>
-        <ul>
-          <!-- us-7(5 li) -->
-          <li>
+      <section  id="Document_Window_Navigator" class="main-section">
+        <header>
+          <h2>Document Window Navigator</h2>
+          <p>Javascript can read and write HTML <strong>Document</strong>.  And also get information about the <strong>Window</strong> rendered by the web browser.  And also information about the web browser itself(<strong>Navigator</strong>)</p>
+        </header>
+        <article>
+          <h3>Document interface:</h3>
+          <ul>
+            <li>
               <h4>Read from Document:</h4>
               <p>Javascript can get a certain location in the document using CSS selector:</p>
               <code>
                 const win_nav_docObj = document.querySelector('#win-nav-doc');
               </code>
-              </li>
-          <li>
+            </li>
+            <li>
               <h4>Write into Document:</h4>
               <p>Javascript can write into the document like this:</p>
               <code>
                 const_win_nav_docObj.textContent = 'The Replaced text';
               </code>
-              </li>
-              </ul>
-              <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">HTMLElement</a> in MDN web docs</aside>
-            </article>
-            <article>
-              <h3>Window interface:</h3>
-              <ul>
-               <li><h4>Read viewport width</h4>
-                <p>To get the width into a variable 'viewportWidth' as int:</p>
-                <pre><code>let viewportWidth = window.innerWidth;</code></pre></li>
-               <li><h4>Read viewport height</h4>
-                <p>To get the height into a variable 'viewportHeight' as int:</p>
-                <pre><code>let viewportHeight = window.innerHeight;</code></pre></li>
-              </ul>
-              <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window</a> interface in MDN web docs)</aside>
-            </article>
-            <article>
-              <h3>Navigator interface:</h3>
-               <ul>
-                <li>
-                  <h4>User agent:</h4>
-                <p>Supported Javascript version depends on <strong>'user agent'</strong> that is 'web browser'(like: <em>Firefox</em>, <em>Chrome</em>, <em>Edge</em>, <em>Safari</em>)).</p>
-                <p>Ever before, the precise appearance needed to be configured according to the browser rendering engine.  Following code gets 'user agent'(web browser) as a string(text):</p>
-        <code>const userAgent = window.navigator.userAgent;</code>
-      </li>
-                <li>
-                  <h4>User language:</h4>
-                  <p>The language of browser user interface is useful to match with webpage language.</p>
-        <code>const userLanguage = window.navigator.language;</code>
-        <aside>Language tag before hyphen is like: <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>(<em>Wikipedia</em>)</aside>
-                </li>
-            </ul>
-          </article>
-        <!-- us-6 -->
-      </section>
-      <section  id="Document_Object_Model" class="main-section">
-        <h2>Document Object Model</h2>
-        <p>In Javascript, 'Document Object Model' is represented as the 'document' object.</p>
-      </section>
-      <section  id="Basic_DOM_operation" class="main-section">
-        <h2>Basic DOM operation</h2>
+            </li>
+          </ul>
+          <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">HTMLElement</a> in MDN web docs</aside>
+        </article>
         <article>
-          <h3>Create / Append / Move / Remove a node</h3>
-        <ul>
-          <li><h4>Creates a new element node with a tag:</h4>
+          <h3>Window interface:</h3>
+          <ul>
+            <li>
+              <h4>Read viewport width</h4>
+              <p>To get the width into a variable 'viewportWidth' as int:</p>
+              <pre><code>let viewportWidth = window.innerWidth;</code></pre></li>
+            <li>
+              <h4>Read viewport height</h4>
+              <p>To get the height into a variable 'viewportHeight' as int:</p>
+              <pre><code>let viewportHeight = window.innerHeight;</code></pre></li>
+          </ul>
+          <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window</a> interface in MDN web docs)</aside>
+        </article>
+        <article>
+          <h3>Navigator interface:</h3>
+          <ul>
+           <li>
+              <h4>User agent:</h4>
+              <p>Supported Javascript version depends on <strong>'user agent'</strong> that is 'web browser'(like: <em>Firefox</em>, <em>Chrome</em>, <em>Edge</em>, <em>Safari</em>)).</p>
+              <p>Ever before, the precise appearance needed to be configured according to the browser rendering engine.  Following code gets 'user agent'(web browser) as a string(text):</p>
+              <code>const userAgent = window.navigator.userAgent;</code>
+            </li>
+            <li>
+              <h4>User language:</h4>
+              <p>The language of browser user interface is useful to match with webpage language.</p>
+              <code>const userLanguage = window.navigator.language;</code>
+              <aside>Language tag before hyphen is like: <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>(<em>Wikipedia</em>)</aside>
+            </li>
+          </ul>
+          </article>
+        </section>
+        <section  id="Document_Object_Model" class="main-section">
+          <header>
+            <h2>Document Object Model</h2>
+            <p>In Javascript, 'Document Object Model' is represented as Document type interface.  It is called as 'DOM'.</p>
+          </header>
+          <article>
+            <p>DOM is a tree structure interface corresponds with HTML structure.</p>
+            <p>In a JavaScript code, the document model is available as the 'document' object.</p>
+            <label>To get its property:<code>document.<em>prop</em></code></label>
+            <label>To call its function with parameters:<code>document.<em>func</em>(<em>param1</em>, <em>param2</em>)</code></label>
+          </article>
+        </section>
+        <section  id="Basic_DOM_operation" class="main-section">
+          <header>
+            <h2>Basic DOM operation</h2>
+            <p>How to operate an HTML document</p>
+          </header>
+          <article>
+            <h3>Create / Append / Move / Remove a node</h3>
+            <ul>
+            <li>
+              <h4>Creates a new element node with a tag:</h4>
           <code>let divElem = document.createElement('div');</code></li>
         <li> <h4>Modify the element:</h4>
       <code>divElem.className = "greeting";
@@ -101,13 +108,15 @@
       </ul>
       <div>
       <aside>Append the element node to other location cause 'move', resulting old position one is automatically removed.  If neeed to duplicate the element node, use <strong>cloneNode(<em>bool</em>)</strong> method.  If the <strong><em>bool</em></strong> is true then deep copy else no child copy.  In case to remove the element node, use <strong>remove()</strong> method of the node itself.</aside>
-     </div>
+         </div>
         </article>
       </section>
-      <section  id="Event_modification" class="main-section">
-        <h2>Event modification</h2>
+      <section  id="Event_customization" class="main-section">
+        <header>
+          <h2>Event customization</h2>
+        </header>
         <article>
-          <p>Assigns an event handler to the DOM object:</p>
+          <p>Assigns a function to an event handler(like <em>onclick</em>) of a with-event-handler element(like <em>input</em>) of the DOM object(that is <em>document</em>):</p>
           <label>(HTML):
           <code>&lt;input id="btn_elem" type="button" value="Click me"&gt;</code></label>
           <label>(script):
@@ -125,10 +134,12 @@
         </article>
       </section>
       <section id="Summary" class="main-section">
-        <h2>Summary</h2>
+        <header>
+          <h2>Summary</h2>
+        </header>
         <article>
-          <h3>Recommended interface:</h3>
-        <p>Use <strong>querySelector</strong> to fetch a node/element in the document, do not use 'id' object directry.  The benefit is: no need to change CSS naming convention as "hypen connected" to "underbar connected".</p>
+          <h3>Recommended JavaScript coding:</h3>
+        <p>Use <strong>querySelector</strong> to fetch a node/element in the document, do not use 'id' object directry.  The benefit is: no need to change CSS naming convention as "hypen-connected" to "underbar_connected".</p>
       </article>
     </section>
     </main>
@@ -164,6 +175,5 @@
                 event_divObj.textContent = `${event_org_txt} + ${btn_counter}`;
               }
     </script>
-    <!-- btn_elem.onclick = function() { alert('Thank you clicking "Click me"!'); };-->
   </body>
 </html>
