@@ -10,9 +10,13 @@
   <body><div class="row">
     <div class="col-one">
     <nav id="navbar">
-      <h1>JS DOM API</h1>
+      <header>
+        <h1>JS DOM API</h1>
+        <p>JavaScript Document Model</p>
+        <p>Application Program Interface</p>
+      </header>
         <a href="#Document_Window_Navigator" class="nav-link">Document Window Navigator</a>
-        <a href="#Document_Object_Model" class="nav-link">Document Opject Model</a>
+        <a href="#Document_Object_Model" class="nav-link">Document Object Model</a>
         <a href="#Basic_DOM_operation" class="nav-link">Basic DOM operation</a>
         <a href="#Event_customization" class="nav-link">Event customization</a>
         <a href="#Summary" class="nav-link">Summary</a>
@@ -20,10 +24,8 @@
     <div class="col-two">
     <main id="main-doc">
       <section  id="Document_Window_Navigator" class="main-section">
-        <header>
-          <h2>Document Window Navigator</h2>
-          <p>Javascript can read and write HTML <strong>Document</strong>.  And also get information about the <strong>Window</strong> rendered by the web browser.  And also information about the web browser itself(<strong>Navigator</strong>)</p>
-        </header>
+        <header>Document Window Navigator</header>
+        <p>Javascript can read and write HTML <strong>Document</strong>.  And also get information about the <strong>Window</strong> rendered by the web browser.  And also information about the web browser itself(<strong>Navigator</strong>)</p>
         <article>
           <h3>Document interface:</h3>
           <ul>
@@ -77,10 +79,8 @@
           </article>
         </section>
         <section  id="Document_Object_Model" class="main-section">
-          <header>
-            <h2>Document Object Model</h2>
+          <header>Document Object Model</header>
             <p>In Javascript, 'Document Object Model' is represented as Document type interface.  It is called as 'DOM'.</p>
-          </header>
           <article>
             <p>DOM is a tree structure interface corresponds with HTML structure.</p>
             <p>In a JavaScript code, the document model is available as the 'document' object.</p>
@@ -89,10 +89,8 @@
           </article>
         </section>
         <section  id="Basic_DOM_operation" class="main-section">
-          <header>
-            <h2>Basic DOM operation</h2>
+          <header>Basic DOM operation</header>
             <p>How to operate an HTML document</p>
-          </header>
           <article>
             <h3>Create / Append / Move / Remove a node</h3>
             <ul>
@@ -113,9 +111,7 @@
         </article>
       </section>
       <section  id="Event_customization" class="main-section">
-        <header>
-          <h2>Event customization</h2>
-        </header>
+        <header>Event customization</header>
         <article>
           <p>Assigns a function to an event handler(like <em>onclick</em>) of a with-event-handler element(like <em>input</em>) of the DOM object(that is <em>document</em>):</p>
           <label>(HTML):
@@ -135,9 +131,7 @@
         </article>
       </section>
       <section id="Summary" class="main-section">
-        <header>
-          <h2>Summary</h2>
-        </header>
+        <header>Summary</header>
         <article>
           <h3>Recommended JavaScript coding:</h3>
         <p>Use <strong>querySelector</strong> to fetch a node/element in the document, do not use 'id' object directry.  The benefit is: no need to change CSS naming convention as "hypen-connected" to "underbar_connected".</p>

@@ -37,11 +37,11 @@ section {
 section > p {
     margin: 1rem 1rem 2rem 3rem;
 }
-main h2, main h3, main h4 {
-    padding: 0;
-    margin: 0;
+main h3, main h4 {
+    padding: none;
+    margin: none;
 }
-main h2 {
+section > header {
     padding: -1em 1em 1em 2em;
     margin: -1rem 1rem 0 2rem;
 }
@@ -64,7 +64,7 @@ nav {
     margin: none;
     padding: none;
 }
-h1 {
+nav > header {
     display: block;
     margin: 1em 0 1em 0;
     padding: 1em 0 1em 0;
@@ -72,6 +72,8 @@ h1 {
     border-width: 0 0 medium 0;
 }
 nav a {
+    font-weight: bold;
+    color: blue;
     text-decoration: none;
     display: block;
     border: solid black;
@@ -80,7 +82,7 @@ nav a {
     padding: 1em 1em 1em 1em;
 
 }
-section h2 {
+section header {
     display: block;
     margin: -1rem 0rem -1rem 2rem;
     padding: 1rem 0rem 1rem 2rem;
