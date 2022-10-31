@@ -8,7 +8,7 @@
   </head>
   <script type="text/Javascript" src="./out/app.js" defer></script>
   <body><div class="row">
-    
+    <div class="col-one">
     <nav id="navbar">
       <h1>JS DOM API</h1>
         <a href="#Document_Window_Navigator" class="nav-link">Document Window Navigator</a>
@@ -16,7 +16,8 @@
         <a href="#Basic_DOM_operation" class="nav-link">Basic DOM operation</a>
         <a href="#Event_customization" class="nav-link">Event customization</a>
         <a href="#Summary" class="nav-link">Summary</a>
-    </nav>
+    </nav></div>
+    <div class="col-two">
     <main id="main-doc">
       <section  id="Document_Window_Navigator" class="main-section">
         <header>
@@ -143,7 +144,6 @@
       </article>
     </section>
     </main>
-    </div>
     <footer>
       <p>This webpage is cited from:
       <cite><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">MDN|Learn/JavaScript/Client-side web APIs/Manipulating documents</a></cite></p>
@@ -154,8 +154,8 @@
       <label>Viewport width: <p class="script-write" id="viewport-width"></p></label>
       <label>User agent: <p class="script-write" id="user-agent"></p> </label>
       <label>User language: <p class="script-write" id="user-language"></p> </label>
-    </div>
     </footer>
+    </div></div>
     <script>
     let viewportWidth = window.innerWidth;
     const win_nav_docObj = document.querySelector('#viewport-width');
