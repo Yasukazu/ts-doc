@@ -5,8 +5,10 @@ head {
     height: 0;
 }
 body {
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
     border: unset;
 }
 div.row { /* us-14 */
@@ -18,6 +20,7 @@ div.row { /* us-14 */
 div.col-one {
     margin: 0rem 0 3rem 0;
     padding: 0em 0 0 0;
+    width: auto;
 }
 div.col-two {
     border: solid black;
@@ -94,14 +97,22 @@ section p {
     div.row { /* us-14 */
        display: flex;
        flex-direction: row; 
+       overflow: hidden;
         /* flex-wrap: nowrap; */
     }
     div.col-one {
+        display: flex;
+        flex-direction: column;
         order: 1;
-        width: 25%;
+        width: 50vw;
+        height: 100vh;
         margin: -2rem 0 0 0;
+        overflow-x: hidden;
+        overflow-y: scroll;
     }
     div.col-two {
+        overflow: hidden;
+        width: auto;
         order: 2;
         margin: 3rem 0 0 0;
     }
