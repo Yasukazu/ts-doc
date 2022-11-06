@@ -111,6 +111,9 @@ section p {
 
 /* Wide screen -> 2-column, left column vertical scroll bar */
 @media (min-width: 850px) {
+    html{
+        scroll-padding-top: 0;
+    }
     div.row { /* us-14 */
        display: flex;
        flex-direction: row; 
