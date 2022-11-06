@@ -108,6 +108,15 @@ section header {
 section p {
     margin: 0 0 0 5rem;
 }
+#btn-elem {
+    border: thin solid black;
+    background-color: yellow;
+    height: 2em;
+    margin: 1em 1em 1em 1em;
+    padding: 0 1em 0 1em;
+    border-radius: 0.5em;
+    font-weight: bolder;
+}
 
 /* Wide screen -> 2-column, left column vertical scroll bar */
 @media (min-width: 850px) {
