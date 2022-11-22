@@ -24,7 +24,7 @@ body {
 main {
     padding: 0rem;
    /* margin: -3rem 0 0 -3rem;*/
-    scroll-padding-top: calc(var(--col-h)  + 51rem);
+    /*scroll-padding-top: calc(var(--col-h)  + 51rem);*/
 }
 div.row { /* us-14 */
     width: 100%;
@@ -38,7 +38,7 @@ div.col-one {
     width: 100%;
 }
 div.col-two {
-    padding-top: calc(var(--col-h)+11rem);
+    padding-top: var(--col-h);
 }
 section {
     display: block;
@@ -125,7 +125,9 @@ section p {
     border-radius: 0.5em;
     font-weight: bolder;
 }
-
+.main-section {
+  scroll-margin: 10rem;
+}
 /* Wide screen -> 2-column, left column vertical scroll bar */
 @media (min-width: 850px) {
     html{
