@@ -8,15 +8,10 @@
     color: black;
     background-color: rgba(255, 255, 255, 0.8);
 }
-:root {
+body {
     --hdr-h: 5.5rem;
     --nav-h: 4.5rem;
     --col-h: 10rem;
-}
-head {
-    height: 0;
-}
-body {
     height: 100vh;
     overflow: auto;
     border: unset;
