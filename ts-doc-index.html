@@ -6,21 +6,23 @@
     <title>HTML Document manipulation by Javascript</title>
     <link rel="stylesheet" href="./styles.css">
   </head>
-  <script type="text/Javascript" src="./out/app.js" defer></script>
-  <body><div class="row">
+  <script type="text/Javascript" src="./event-example.js" defer></script>
+  <body>
+  <div class="row">
     <div class="col-one">
-    <nav id="navbar">
       <header>
         <h1>JS DOM API</h1>
         <p>JavaScript Document Model</p>
         <p>Application Program Interface</p>
       </header>
+      <nav id="navbar">
         <a href="#Document_Window_Navigator" class="nav-link">Document Window Navigator</a>
         <a href="#Document_Object_Model" class="nav-link">Document Object Model</a>
         <a href="#Basic_DOM_operation" class="nav-link">Basic DOM operation</a>
         <a href="#Event_customization" class="nav-link">Event customization</a>
         <a href="#Summary" class="nav-link">Summary</a>
-    </nav></div>
+      </nav>
+    </div>
     <div class="col-two">
     <main id="main-doc">
       <section  id="Document_Window_Navigator" class="main-section">
@@ -149,25 +151,7 @@
       <label>User agent: <p class="script-write" id="user-agent"></p> </label>
       <label>User language: <p class="script-write" id="user-language"></p> </label>
     </footer>
-    </div></div>
-    <script>
-    let viewportWidth = window.innerWidth;
-    const win_nav_docObj = document.querySelector('#viewport-width');
-    win_nav_docObj.textContent = `${viewportWidth}`;
-    const userAgent = window.navigator.userAgent;
-    const userAgent_docObj = document.querySelector('#user-agent');
-    userAgent_docObj.textContent = `${userAgent}`;
-    const userLanguage = window.navigator.language;
-    const userLanguage_docObj = document.querySelector('#user-language');
-    userLanguage_docObj.textContent = `${userLanguage}`;
-    const event_divObj = document.querySelector('#event-div');
-    const event_org_txt = event_divObj.textContent;
-    const btn_elem = document.querySelector("#btn-elem");
-    let btn_counter = 0;
-              btn_elem.onclick = function() {
-                btn_counter += 1;
-                event_divObj.textContent = `${event_org_txt} + ${btn_counter}`;
-              }
-    </script>
+    </div>
+  </div>
   </body>
 </html>
