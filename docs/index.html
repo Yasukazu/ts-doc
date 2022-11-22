@@ -121,14 +121,14 @@
           <label>(HTML):
           <code class="language-javascript">&lt;input id="btn_elem" type="button" value="Click me"&gt;</code></label>
           <label>(script):
-            <code class="language-javascript">const btn_elem = document.querySelector("#btn-elem");
-    const event_org_txt = event_divObj.textContent;
-               let btn_counter = 0;
-              btn_elem.onclick = function() {
-                btn_counter += 1;
-                event_divObj.textContent = `${event_org_txt} + ${btn_counter}`;
-              }
-          </code></label> 
+            <pre><code class="language-javascript">
+const btn_elem = document.querySelector("#btn-elem");
+const event_org_txt = event_divObj.textContent;
+let btn_counter = 0;
+btn_elem.onclick = function() {
+  btn_counter += 1;
+  event_divObj.textContent = `${event_org_txt} + ${btn_counter}`;
+}</code></pre></label> 
           <div id="event-div">Event</div>
           <label >
           <input id="btn-elem" type="button" value="Click me"> <- If you click this button, then above area text becomes added [ + click-count]. </label>
