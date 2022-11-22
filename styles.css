@@ -124,26 +124,44 @@ section p {
   scroll-margin: var(--col-h);
 }
 /* Wide screen -> 2-column, left column vertical scroll bar */
-@media (min-width: 850px) {
-    html{
+@media (min-width: 540px) {
+    body {
         scroll-padding-top: 0;
+        --nav-w: 16rem;
     }
-    div.row { /* us-14 */
-       display: flex;
-       flex-direction: row; 
+    .main-section {
+        scroll-margin: 0;
     }
-    div.row div.col-1 {
-        flex-direction: column; /* 1 */
-        order: 1;
+    div.row { 
+       /* display: flex;
+       flex-direction: row; */
+    }
+    div.col-1 {
+        display: flex;
+        flex-direction: column;  
         height: 100%; /* 2 */
-        width: 100vw;
-        margin: -2rem 0 0 0;
-        overflow: scroll; /* 3 */
-        position: sticky;
+        width: var(--nav-w); /* 100vw; */
+        margin: 0; /* -2rem 0 0 0;*/
+        /* overflow: scroll;  3 */
+        /*position: sticky;*/
+        border:  medium  solid black;
     }
-    div.row div.col-2 {
-        order: 2;
-        margin: 3rem 0 0 0;
+    .col-1 > header {
+        height: auto;
+        border:  medium  solid black;
+    }
+    nav {
+        height: auto;
+        border: none;
+        overflow-y: unset;
+    }
+    div.col-2 {
+        /* order: 2; */
+        position: absolute;
+        top: 0;
+        left: var(--nav-w);
+        padding-top: 0;
+        margin: 3rem 0 0 0;/* var(--nav-w);*/
     }
 }
 article h3 {
@@ -171,8 +189,6 @@ article pre {
 }
 code {
     display: inline-block;
-    background-color: black;
-    color: yellow;
     padding: 1em  1em;
     margin: 1em 0 1em 3em;
 }
@@ -194,15 +210,18 @@ article div {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: magenta;
     background-color: green;
     width: 8rem;
     height: 4rem;
 }
 footer {
-    border-width: 1px;
-    border-color: blue;
-    margin: 1em;
+    display: block;
+    background-color: inherit;
+    background-color: lightgray;
+    border: medium solid gray;
+    margin: 0rem;
 }
 footer label {
-    display: block;
+    background-color: lightgreen;
 }

@@ -5,9 +5,11 @@
     <mata charset="utf-8">
     <title>HTML Document manipulation by Javascript</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./prism.css">
   </head>
-  <script type="text/Javascript" src="./event-example.js" defer></script>
   <body>
+  <script type="text/Javascript" src="./prism.js" defer></script>
+  <script type="text/Javascript" src="./event-example.js" defer></script>
   <div class="row">
     <div class="col-1">
       <header>
@@ -34,14 +36,14 @@
             <li>
               <h4>Read from Document:</h4>
               <p>Javascript can get a certain location in the document using CSS selector:</p>
-              <code>
+              <code class="language-javascript">
                 const win_nav_docObj = document.querySelector('#win-nav-doc');
               </code>
             </li>
             <li>
               <h4>Write into Document:</h4>
               <p>Javascript can write into the document like this:</p>
-              <code>
+              <code class="language-javascript">
                 const_win_nav_docObj.textContent = 'The Replaced text';
               </code>
             </li>
@@ -54,11 +56,11 @@
             <li>
               <h4>Read viewport width</h4>
               <p>To get the width into a variable 'viewportWidth' as int:</p>
-              <pre><code>let viewportWidth = window.innerWidth;</code></pre></li>
+              <pre><code class="language-javascript">let viewportWidth = window.innerWidth;</code></pre></li>
             <li>
               <h4>Read viewport height</h4>
               <p>To get the height into a variable 'viewportHeight' as int:</p>
-              <pre><code>let viewportHeight = window.innerHeight;</code></pre></li>
+              <pre><code class="language-javascript">let viewportHeight = window.innerHeight;</code></pre></li>
           </ul>
           <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window</a> interface in MDN web docs)</aside>
         </article>
@@ -69,12 +71,12 @@
               <h4>User agent:</h4>
               <p>Supported Javascript version depends on <strong>'user agent'</strong> that is 'web browser'(like: <em>Firefox</em>, <em>Chrome</em>, <em>Edge</em>, <em>Safari</em>)).</p>
               <p>Ever before, the precise appearance needed to be configured according to the browser rendering engine.  Following code gets 'user agent'(web browser) as a string(text):</p>
-              <code>const userAgent = window.navigator.userAgent;</code>
+              <code class="language-javascript">const userAgent = window.navigator.userAgent;</code>
             </li>
             <li>
               <h4>User language:</h4>
               <p>The language of browser user interface is useful to match with webpage language.</p>
-              <code>const userLanguage = window.navigator.language;</code>
+              <code class="language-javascript">const userLanguage = window.navigator.language;</code>
               <aside>Language tag before hyphen is like: <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>(<em>Wikipedia</em>)</aside>
             </li>
           </ul>
@@ -86,8 +88,8 @@
           <article>
             <p>DOM is a tree structure interface corresponds with HTML structure.</p>
             <p>In a JavaScript code, the document model is available as the 'document' object.</p>
-            <label>To get its property:<code>document.<em>prop</em></code></label>
-            <label>To call its function with parameters:<code>document.<em>func</em>(<em>param1</em>, <em>param2</em>)</code></label>
+            <label>To get its property:<code class="language-javascript">document.<em>prop</em></code></label>
+            <label>To call its function with parameters:<code class="language-javascript">document.<em>func</em>(<em>param1</em>, <em>param2</em>)</code></label>
           </article>
         </section>
         <section  id="Basic_DOM_operation" class="main-section">
@@ -98,12 +100,12 @@
             <ul>
             <li>
               <h4>Creates a new element node with a tag:</h4>
-          <code>let divElem = document.createElement('div');</code></li>
+          <code class="language-javascript">let divElem = document.createElement('div');</code></li>
         <li> <h4>Modify the element:</h4>
-      <code>divElem.className = "greeting";
+      <code class="language-javascript">divElem.className = "greeting";
         divElem.innerHTML = "<strong>He-lo</strong>, What's going on here?";</code></li>
         <li> <h4>Append the element into the document:</h4>
-        <code>
+        <code class="language-javascript">
         document.body.append(divElem);
       </code></li>
       </ul>
@@ -117,9 +119,9 @@
         <article>
           <p>Assigns a function to an event handler(like <em>onclick</em>) of a with-event-handler element(like <em>input</em>) of the DOM object(that is <em>document</em>):</p>
           <label>(HTML):
-          <code>&lt;input id="btn_elem" type="button" value="Click me"&gt;</code></label>
+          <code class="language-javascript">&lt;input id="btn_elem" type="button" value="Click me"&gt;</code></label>
           <label>(script):
-            <code>const btn_elem = document.querySelector("#btn-elem");
+            <code class="language-javascript">const btn_elem = document.querySelector("#btn-elem");
     const event_org_txt = event_divObj.textContent;
                let btn_counter = 0;
               btn_elem.onclick = function() {
