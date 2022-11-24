@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
     <title>HTML Document manipulation by Javascript</title>
     <link rel="stylesheet" href="./styles.css">
-  </head>
-  <body>
+</head>
+<body>
   <div class="row">
     <div class="col-1">
       <header>
@@ -21,128 +21,138 @@
       </nav>
     </div>
     <div class="col-2">
-    <main id="main-doc">
-      <section  id="Document_Window_Navigator" class="main-section">
-        <header>Document / Window / Navigator</header>
-        <p>Javascript can read and write HTML <strong>Document</strong>.  And also get information about the <strong>Window</strong> rendered by the web browser.  And also information about the web browser itself(<strong>Navigator</strong>)</p>
-        <article>
-          <header>Document interface:</header>
-          <dl>
-            <dt>Read from Document:</dt>
-            <dd>Javascript can get a certain location in the document using CSS selector:<br>
+      <main id="main-doc">
+        <section id="Document_Window_Navigator" class="main-section">
+          <header>Document / Window / Navigator</header>
+          <p>Javascript can read and write HTML <strong>Document</strong>. And also get information about the <strong>Window</strong> rendered by the web browser. And also information about the web browser itself(<strong>Navigator</strong>)</p>
+          <article>
+            <header>Document interface:</header>
+            <dl>
+              <dt>Read from Document:</dt>
+              <dd>Javascript can get a certain location in the document using CSS selector:<br>
               <code>
                 const win_nav_docObj = document.querySelector('#win-nav-doc');
               </code></dd>
-            <dt>Write into Document:</dt>
-            <dd>Javascript can write into the document like this:<br>
+              <dt>Write into Document:</dt>
+              <dd>Javascript can write into the document like this:<br>
               <code>
                 const_win_nav_docObj.textContent = 'The Replaced text';
               </code></dd>
-          </dl>
-          <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">HTMLElement</a> in MDN web docs</aside>
-        </article>
-        <article>
-          <header>Window interface:</header>
-            <dl>
+            </dl>
+            <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">HTMLElement</a> in MDN web docs</aside>
+          </article>
+          <article>
+            <header>Window interface:</header>
+              <dl>
               <dt>Read viewport width</dt>
-              <dd>To get the width into a variable 'viewportWidth' as int:</dd>
-              <dd> <code>let viewportWidth = window.innerWidth;</code></dd>
+              <dd>To get the width into a variable 'viewportWidth' as int:<br>
+                <code>let viewportWidth = window.innerWidth;</code>
+              </dd>
               <dt>Read viewport height</dt>
-              <dd>To get the height into a variable 'viewportHeight' as int:</dd>
-              <dd> <code>let viewportHeight = window.innerHeight;</code></dd>
-          </dl>
-          <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window</a> interface in MDN web docs)</aside>
-        </article>
-        <article>
-          <header>Navigator interface:</header>
+              <dd>To get the height into a variable 'viewportHeight' as int:<br>
+              <code>let viewportHeight = window.innerHeight;</code></dd>
+            </dl>
+            <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window</a> interface in MDN web docs)</aside>
+          </article>
+          <article>
+            <header>Navigator interface:</header>
             <dl>
-           <dt> User agent:</dt>
-            <dd>Supported Javascript version depends on <strong>'user agent'</strong> that is 'web browser'(like: <em>Firefox</em>, <em>Chrome</em>, <em>Edge</em>, <em>Safari</em>)).<br>
-              Ever before, the precise appearance needed to be configured according to the browser rendering engine.  Following code gets 'user agent'(web browser) as a string(text):<br>
-              <code>const userAgent = window.navigator.userAgent;</code></dd>
-          <dt>User language:</dt>
+              <dt>User agent:</dt>
+              <dd>Supported Javascript version depends on <strong>'user agent'</strong> that is 'web browser'(like: <em>Firefox</em>, <em>Chrome</em>, <em>Edge</em>, <em>Safari</em>)).<br>
+                Ever before, the precise appearance needed to be configured according to the browser rendering engine. Following code gets 'user agent'(web browser) as a string(text):<br>
+                <code>const userAgent = window.navigator.userAgent;</code>
+              </dd>
+              <dt>User language:</dt>
               <dd>The language of browser user interface is useful to fit with it's proper webpage language.<br>
-              <code>const userLanguage = window.navigator.language;</code>
-              <aside>Language tag before hyphen is like: <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>(<em>Wikipedia</em>)</aside></dd>
-          </dl>
+                <code>const userLanguage = window.navigator.language;</code>
+              </dd>
+            </dl>
+              <aside>Language tag before hyphen is like: <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>(<em>Wikipedia</em>)</aside>
           </article>
         </section>
-        <section  id="Document_Object_Model" class="main-section">
+        <section id="Document_Object_Model" class="main-section">
           <header>Document Object Model</header>
-            <p>In Javascript, 'Document Object Model' is represented as Document type interface.  It is called as 'DOM'.</p>
+          <p>In Javascript, 'Document Object Model' is represented as Document type interface. It is called as 'DOM'.</p>
           <article>
             <p>DOM is a tree structure interface corresponds with HTML structure.<br>
-            In a JavaScript code, the document model is available as the 'document' object.</p>
-            <label>To get its property:<code>document.<em>prop</em></code></label>
-            <label>To call its function with parameters:<code>document.<em>func</em>(<em>param1</em>, <em>param2</em>)</code></label>
+              In a JavaScript code, the document model is available as the 'document' object.</p>
+            <dl>
+              <dt>To get its property:</dt>
+              <dd><code>document.<em>prop</em></code></dd>
+            <dt>To call its function with parameters:</dt>
+            <dd><code>document.<em>func</em>(<em>param1</em>, <em>param2</em>)</code></dd>
+            </dl>
           </article>
         </section>
-        <section  id="Basic_DOM_operation" class="main-section">
+        <section id="Basic_DOM_operation" class="main-section">
           <header>Basic DOM operation</header>
-            <p>How to operate an HTML document</p>
+          <p>How to operate an HTML document</p>
           <article>
             <header>Create / Append / Move / Remove a node</header>
             <dl>
-            <dt>
-              Create a new element node with a tag:<dt>
-              <dd>(create a node object by create-element method call with a parameter(tag))Script: 
-          <code>let divElem = document.createElement('div');</code></dd>
+              <dt>
+                Create a new element node with a tag:
+              </dt>
+              <dd>(create a node object by create-element method call with a parameter(tag))Script:<br>
+                <code>let divElem = document.createElement('div');</code>
+              </dd>
               <dt>Modify the element:</dt>
-      <dd>(JavaScript:) <code>divElem.className = "greeting";
-        divElem.innerHTML = "<strong>He-lo</strong>, What's going on here?";</code></dd>
+              <dd>(JavaScript:) <code>divElem.className = "greeting";
+                  divElem.innerHTML = "<strong>He-lo</strong>, What's going on here?";</code></dd>
               <dt>Append the element into the document:</dt>
-        <dd>(JavaScript:) <code>
-        document.body.append(divElem);
-      </code></dd>
-      </dl>
-      <div>
-      <aside>Append the element node to other location cause 'move', resulting old position one is automatically removed.  If neeed to duplicate the element node, use <strong>cloneNode(<em>bool</em>)</strong> method.  If the <strong><em>bool</em></strong> is true then deep copy else no child copy.  In case to remove the element node, use <strong>remove()</strong> method of the node itself.</aside>
-         </div>
-        </article>
-      </section>
-      <section  id="Event_customization" class="main-section">
-        <header>Event customization</header>
-        <article>
-          <p>Assigns a function to an event handler(like <em>onclick</em>) of a with-event-handler element(like <em>input</em>) of the DOM object(that is <em>document</em>):</p>
-          <dl>
-            <dd>(HTML):
+              <dd>(JavaScript:) <code>
+                  document.body.append(divElem);
+                </code></dd>
+            </dl>
+              <aside>Append the element node to other location cause 'move', resulting old position one is automatically removed. If neeed to duplicate the element node, use <strong>cloneNode(<em>bool</em>)</strong> method. If the <strong><em>bool</em></strong> is true then deep copy else no child copy. In case to remove the element node, use <strong>remove()</strong> method of the node itself.</aside>
+          </article>
+        </section>
+        <section id="Event_customization" class="main-section">
+          <header>Event customization</header>
+          <article>
+            <p>Assigns a function to an event handler(like <em>onclick</em>) of a with-event-handler element(like <em>input</em>) of the DOM object(that is <em>document</em>):</p>
+            <dl>
+              <dt>(HTML):</dt>
               <dd>
-           
-          <code>&lt;input id="btn_elem" type="button" value="Click me"&gt;</code></dd>
-          <dd>(script):
-            <dd><code>const btn_elem = document.querySelector("#btn-elem");<br>
-    const event_org_txt = event_divObj.textContent;<br>
-               let btn_counter = 0;<br>
-              btn_elem.onclick = function() {<span>
-                btn_counter += 1;<br>
-                event_divObj.textContent = `${event_org_txt} + ${btn_counter}`;</span>
-              }
-         </code></dd> 
-            </dt></dl>
-          <div id="event-div">Event</div>
-          <label >
-          <input id="btn-elem" type="button" value="Click me"> <- If you click this button, then above area text becomes added [ + click-count]. </label>
-        </article>
-      </section>
-      <section id="Summary" class="main-section">
-        <header>Summary</header>
-        <article>
-          <header>Recommended JavaScript coding:</header>
-        <p>Use <strong>querySelector</strong> to fetch a node/element in the document, do not use 'id' object directry.  The benefit is: no need to change CSS naming convention as "hypen-connected" to "underbar_connected".</p>
-      </article>
-    </section>
-    </main>
-    <footer>
-      <p>This webpage is cited from:
-      <cite><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">MDN|Learn/JavaScript/Client-side web APIs/Manipulating documents</a></cite></p>
-      <p>Also from: 
-        <cite><a href="https://javascript.info/document">JAVASCRIPT.INFO|Document|.. learn to manipulate a web-page using Javascript.</a></cite>
-      </p>
-      <div class="script-write">
-      <label>Viewport width: <p class="script-write" id="viewport-width"></p></label>
-      <label>User agent: <p class="script-write" id="user-agent"></p> </label>
-      <label>User language: <p class="script-write" id="user-language"></p> </label>
-    </footer>
+                <code>&lt;input id="btn_elem" type="button" value="Click me"&gt;</code>
+              </dd>
+              <dt>(script):</dt>
+              <dd><code>const btn_elem = document.querySelector("#btn-elem");<br>
+                  const event_org_txt = event_divObj.textContent;<br>
+                  let btn_counter = 0;<br>
+                  btn_elem.onclick = function() {<span>
+                    btn_counter += 1;<br>
+                    event_divObj.textContent = `${event_org_txt} + ${btn_counter}`;</span>
+                  }
+                </code></dd>
+            </dl>
+            <div id="event-div">Event</div>
+            <label>
+              <input id="btn-elem" type="button" value="Click me">
+              &larr; If you click this button, then above area text becomes added [ + click-count]. </label>
+          </article>
+        </section>
+        <section id="Summary" class="main-section">
+          <header>Summary</header>
+          <article>
+            <header>Recommended JavaScript coding:</header>
+            <p>Use <strong>querySelector</strong> to seek for a node/element in the document. The benefit is: the same way of CSS selector GLOB (like: <em>tag</em>[*=<em>class</em>]) power of naming convention as "hypen-connected".</p>
+          </article>
+        </section>
+      </main>
+      <footer>
+        <p>This webpage is cited from:
+          <cite><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">MDN|Learn/JavaScript/Client-side web APIs/Manipulating documents</a></cite>
+        </p>
+        <p>Also from:
+          <cite><a href="https://javascript.info/document">JAVASCRIPT.INFO|Document|.. learn to manipulate a web-page using Javascript.</a></cite>
+        </p>
+        <div class="script-write">
+          <label>Viewport width: <p class="script-write" id="viewport-width"></p></label>
+          <label>User agent: <p class="script-write" id="user-agent"></p> </label>
+          <label>User language: <p class="script-write" id="user-language"></p> </label>
+        </div>
+      </footer>
     </div>
   </div>
   <script type="text/Javascript" src="./event-example.js" defer></script>
