@@ -3,7 +3,7 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <mata charset="utf-8">
+  <meta charset="utf-8">
     <title>HTML Document manipulation by Javascript</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
@@ -31,34 +31,35 @@
             <header>Document interface:</header>
             <dl>
               <dt>Read from Document:</dt>
-              <dd>Javascript can get a certain location in the document using CSS selector:</dd>
+              <dd>Javascript can get a certain location in the document using CSS selector:<br>
               <code>
                 const win_nav_docObj = document.querySelector('#win-nav-doc');
-              </code>
+              </code></dd>
               <dt>Write into Document:</dt>
-              <dd>Javascript can write into the document like this:</dd>
+              <dd>Javascript can write into the document like this:<br>
               <code>
                 const_win_nav_docObj.textContent = 'The Replaced text';
-              </code>
+              </code></dd>
             </dl>
             <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">HTMLElement</a> in MDN web docs</aside>
           </article>
           <article>
-            <dl>Window interface:
+            <header>Window interface:</header>
+              <dl>
               <dt>Read viewport width</dt>
               <dd>To get the width into a variable 'viewportWidth' as int:<br>
                 <code>let viewportWidth = window.innerWidth;</code>
               </dd>
               <dt>Read viewport height</dt>
-              <dd>To get the height into a variable 'viewportHeight' as int:</dd>
-              <code>let viewportHeight = window.innerHeight;</code>
+              <dd>To get the height into a variable 'viewportHeight' as int:<br>
+              <code>let viewportHeight = window.innerHeight;</code></dd>
             </dl>
             <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window</a> interface in MDN web docs)</aside>
           </article>
           <article>
-            <dl>Navigator interface:
-              <dt>
-                User agent:</dt>
+            <header>Navigator interface:</header>
+            <dl>
+              <dt>User agent:</dt>
               <dd>Supported Javascript version depends on <strong>'user agent'</strong> that is 'web browser'(like: <em>Firefox</em>, <em>Chrome</em>, <em>Edge</em>, <em>Safari</em>)).<br>
                 Ever before, the precise appearance needed to be configured according to the browser rendering engine. Following code gets 'user agent'(web browser) as a string(text):<br>
                 <code>const userAgent = window.navigator.userAgent;</code>
@@ -67,8 +68,8 @@
               <dd>The language of browser user interface is useful to fit with it's proper webpage language.<br>
                 <code>const userLanguage = window.navigator.language;</code>
               </dd>
-              <aside>Language tag before hyphen is like: <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>(<em>Wikipedia</em>)</aside>
             </dl>
+              <aside>Language tag before hyphen is like: <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>(<em>Wikipedia</em>)</aside>
           </article>
         </section>
         <section id="Document_Object_Model" class="main-section">
@@ -77,8 +78,12 @@
           <article>
             <p>DOM is a tree structure interface corresponds with HTML structure.<br>
               In a JavaScript code, the document model is available as the 'document' object.</p>
-            <label>To get its property:<code>document.<em>prop</em></code></label>
-            <label>To call its function with parameters:<code>document.<em>func</em>(<em>param1</em>, <em>param2</em>)</code></label>
+            <dl>
+              <dt>To get its property:</dt>
+              <dd><code>document.<em>prop</em></code></dd>
+            <dt>To call its function with parameters:</dt>
+            <dd><code>document.<em>func</em>(<em>param1</em>, <em>param2</em>)</code></dd>
+            </dl>
           </article>
         </section>
         <section id="Basic_DOM_operation" class="main-section">
@@ -89,8 +94,8 @@
             <dl>
               <dt>
                 Create a new element node with a tag:
-              <dt>
-              <dd>(create a node object by create-element method call with a parameter(tag))Script:
+              </dt>
+              <dd>(create a node object by create-element method call with a parameter(tag))Script:<br>
                 <code>let divElem = document.createElement('div');</code>
               </dd>
               <dt>Modify the element:</dt>
@@ -101,9 +106,7 @@
                   document.body.append(divElem);
                 </code></dd>
             </dl>
-            <div>
               <aside>Append the element node to other location cause 'move', resulting old position one is automatically removed. If neeed to duplicate the element node, use <strong>cloneNode(<em>bool</em>)</strong> method. If the <strong><em>bool</em></strong> is true then deep copy else no child copy. In case to remove the element node, use <strong>remove()</strong> method of the node itself.</aside>
-            </div>
           </article>
         </section>
         <section id="Event_customization" class="main-section">
@@ -111,26 +114,24 @@
           <article>
             <p>Assigns a function to an event handler(like <em>onclick</em>) of a with-event-handler element(like <em>input</em>) of the DOM object(that is <em>document</em>):</p>
             <dl>
-              <dd>(HTML):
+              <dt>(HTML):</dt>
               <dd>
-
                 <code>&lt;input id="btn_elem" type="button" value="Click me"&gt;</code>
               </dd>
-              <dd>(script):
+              <dt>(script):</dt>
               <dd><code>const btn_elem = document.querySelector("#btn-elem");<br>
                   const event_org_txt = event_divObj.textContent;<br>
-                  let btn_counter = 0;<BR>
+                  let btn_counter = 0;<br>
                   btn_elem.onclick = function() {<span>
                     btn_counter += 1;<br>
                     event_divObj.textContent = `${event_org_txt} + ${btn_counter}`;</span>
                   }
                 </code></dd>
-              </dt>
             </dl>
             <div id="event-div">Event</div>
             <label>
               <input id="btn-elem" type="button" value="Click me">
-              <- If you click this button, then above area text becomes added [ + click-count]. </label>
+              &larr; If you click this button, then above area text becomes added [ + click-count]. </label>
           </article>
         </section>
         <section id="Summary" class="main-section">
@@ -152,10 +153,10 @@
           <label>Viewport width: <p class="script-write" id="viewport-width"></p></label>
           <label>User agent: <p class="script-write" id="user-agent"></p> </label>
           <label>User language: <p class="script-write" id="user-language"></p> </label>
+        </div>
       </footer>
     </div>
   </div>
+  <script type="text/Javascript" src="./event-example.js" defer></script>
 </body>
-<script type="text/Javascript" src="./event-example.js" defer></script>
-
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <mata charset="utf-8">
+    <meta charset="utf-8">
     <title>HTML Document manipulation by Javascript</title>
     <link rel="stylesheet" href="./styles.css">
   </head>
@@ -29,41 +29,41 @@
           <header>Document interface:</header>
           <dl>
             <dt>Read from Document:</dt>
-            <dd>Javascript can get a certain location in the document using CSS selector:</dd>
+            <dd>Javascript can get a certain location in the document using CSS selector:<br>
               <code>
                 const win_nav_docObj = document.querySelector('#win-nav-doc');
-              </code>
+              </code></dd>
             <dt>Write into Document:</dt>
-            <dd>Javascript can write into the document like this:</dd>
+            <dd>Javascript can write into the document like this:<br>
               <code>
                 const_win_nav_docObj.textContent = 'The Replaced text';
-              </code>
+              </code></dd>
           </dl>
           <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">HTMLElement</a> in MDN web docs</aside>
         </article>
         <article>
-          <dl>Window interface:
+          <header>Window interface:</header>
+            <dl>
               <dt>Read viewport width</dt>
-              <dd>To get the width into a variable 'viewportWidth' as int:<br>
-               <code>let viewportWidth = window.innerWidth;</code>
-              </dd>
+              <dd>To get the width into a variable 'viewportWidth' as int:</dd>
+              <dd> <code>let viewportWidth = window.innerWidth;</code></dd>
               <dt>Read viewport height</dt>
               <dd>To get the height into a variable 'viewportHeight' as int:</dd>
-              <code>let viewportHeight = window.innerHeight;</code>
+              <dd> <code>let viewportHeight = window.innerHeight;</code></dd>
           </dl>
           <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window</a> interface in MDN web docs)</aside>
         </article>
         <article>
-          <dl>Navigator interface:
-           <dt>
-              User agent:</dt>
-              <dd>Supported Javascript version depends on <strong>'user agent'</strong> that is 'web browser'(like: <em>Firefox</em>, <em>Chrome</em>, <em>Edge</em>, <em>Safari</em>)).<br>
+          <header>Navigator interface:</header>
+            <dl>
+           <dt> User agent:</dt>
+            <dd>Supported Javascript version depends on <strong>'user agent'</strong> that is 'web browser'(like: <em>Firefox</em>, <em>Chrome</em>, <em>Edge</em>, <em>Safari</em>)).<br>
               Ever before, the precise appearance needed to be configured according to the browser rendering engine.  Following code gets 'user agent'(web browser) as a string(text):<br>
               <code>const userAgent = window.navigator.userAgent;</code></dd>
           <dt>User language:</dt>
               <dd>The language of browser user interface is useful to fit with it's proper webpage language.<br>
-              <code>const userLanguage = window.navigator.language;</code></dd>
-              <aside>Language tag before hyphen is like: <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>(<em>Wikipedia</em>)</aside>
+              <code>const userLanguage = window.navigator.language;</code>
+              <aside>Language tag before hyphen is like: <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>(<em>Wikipedia</em>)</aside></dd>
           </dl>
           </article>
         </section>
@@ -112,7 +112,7 @@
           <dd>(script):
             <dd><code>const btn_elem = document.querySelector("#btn-elem");<br>
     const event_org_txt = event_divObj.textContent;<br>
-               let btn_counter = 0;<BR>
+               let btn_counter = 0;<br>
               btn_elem.onclick = function() {<span>
                 btn_counter += 1;<br>
                 event_divObj.textContent = `${event_org_txt} + ${btn_counter}`;</span>
