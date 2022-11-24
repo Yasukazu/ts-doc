@@ -1,8 +1,11 @@
 *, *:before, *:after {
   box-sizing: border-box;
 }
+html {
+  font-size: 16px;
+}
 body {
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin: 0;
   padding: 0;
   width: auto;
@@ -10,9 +13,9 @@ body {
   border: none;
   color: black;
   line-height: 1rem;
-  --hdr-h: 5vh;
-  --nav-h: 25vh;
-  --col-h: 30vh;
+  --hdr-h: 2.5rem;
+  --nav-h: 4rem;
+  --col-h: 6.5rem;
   overflow: auto;
   border: none;
   background-color: rgba(55, 55, 55, 1);
@@ -35,21 +38,43 @@ div.row { /* us-14 */
   padding: 0;
 }
 .col-1 {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: var(--col-h);
   text-align: center;
   background-color: lightgray;
 }
+.col-1 header {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(200, 200, 200, 1);
+  width: 100%;
+  height: var(--hdr-h);
+}
+.col-1 button {
+  background: rgba(55, 55, 55, 0.8);
+  height: 100%;
+  padding: 0 0.1em;
+  margin: 0;
+  width: auto;
+  font-size: 1em;  
+  font-weight: bold;
+  color: white;
+}
 .col-2 {
+  display: block;
 position: absolute;
-top: var(--col-h);
+top: var(--hdr-h);
 left: 0;
   /* padding-top: var(--col-h); */
-  scroll-margin: -var(--col-h);
+  /*scroll-margin: -var(--hdr-h);*/
+  /*scroll-margin-top: var(--hdr-h);*/
   background-color: pink;
+  width: 100%;
 }
 section {
   display: block;

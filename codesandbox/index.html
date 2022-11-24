@@ -4,21 +4,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
     <title>HTML Document manipulation by Javascript</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <div class="row">
     <div class="col-1">
       <header>
-        <h4 title="JavaScript Document Model Application Program Interface">JavaScript DOM API</h4>
+        <button  title="JavaScript Document Model Application Program Interface">JS DOM API</button>
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Jump<span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li> <a href="#Document_Window_Navigator" class="nav-link">Document Window Navigator</a> </li>
+          <li> <a href="#Document_Object_Model" class="nav-link">Document Object Model</a> </li>
+          <li> <a href="#Basic_DOM_operation" class="nav-link">Basic DOM operation</a> </li>
+          <li> <a href="#Event_customization" class="nav-link">Event customization</a> </li>
+        <li> <a href="#Summary" class="nav-link">Summary</a> </li>
+        </ul>
       </header>
-      <nav id="navbar" class="navbar">
-        <a href="#Document_Window_Navigator" class="nav-link">Document Window Navigator</a>
-        <a href="#Document_Object_Model" class="nav-link">Document Object Model</a>
-        <a href="#Basic_DOM_operation" class="nav-link">Basic DOM operation</a>
-        <a href="#Event_customization" class="nav-link">Event customization</a>
-        <a href="#Summary" class="nav-link">Summary</a>
-      </nav>
     </div>
     <div class="col-2">
       <main id="main-doc">
