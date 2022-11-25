@@ -51,8 +51,8 @@ div.row { /* us-14 */
   top: var(--hdr-h);
   left: 0;
   z-index: 3;
-  scroll-margin-top: var(--hdr-h);
   width: 100%;
+  scroll-padding-top: var(--hdr-h);
 }
 section {
   padding: 0.5rem 0.5rem 0.5rem 1rem;
@@ -125,16 +125,9 @@ section p {
   border-radius: 0.5em;
   font-weight: bolder;
 }
-.main-section {
-scroll-margin: var(--col-h-1);
-}
-/* Wide screen -> 2-column, left column vertical scroll bar */
 @media (min-width: 540px) {
   body {
-      --nav-w: 16rem;
-  }
-  .main-section {
-      scroll-margin: 0;
+    --nav-w: 16rem;
   }
  .col-1 {
       margin: 0;
@@ -145,14 +138,15 @@ scroll-margin: var(--col-h-1);
  div#nav-bar {
   width: var(--nav-w);
  } 
+ div.row {
+  z-index: 999;
+ }
   .col-2 {
-    border: solid dotted red;
     position: absolute;
     top: var(--hdr-h);
     left: var(--nav-w);
+    width: auto;
     margin: 0;
-    scroll-margin-top: var(--hdr-h);
-    scroll-margin-left: var(--nav-w);
     background: rgba(200, 200, 200, 0.5);
     z-index: 5;
   }
@@ -160,6 +154,7 @@ scroll-margin: var(--col-h-1);
     color: black;
   }
   nav.nav-bar {
+    display: block;
     text-align: center;
     height: auto;
     overflow-y:scroll;
@@ -181,6 +176,9 @@ scroll-margin: var(--col-h-1);
     border-width: 0 0 thin 0;
     margin: 0 0 0 0;
     padding: 0.4em 0em ;
+  }
+  nav a {
+    display: block;
   }
 
 }
