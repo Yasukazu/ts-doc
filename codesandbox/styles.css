@@ -142,7 +142,11 @@ scroll-margin: var(--col-h-1);
   .col-1 > header {
       border:  medium  solid black;
   }
+ div#nav-bar {
+  width: var(--nav-w);
+ } 
   .col-2 {
+    border: solid dotted red;
     position: absolute;
     top: var(--hdr-h);
     left: var(--nav-w);
@@ -155,7 +159,7 @@ scroll-margin: var(--col-h-1);
   main {
     color: black;
   }
-  nav {
+  nav.nav-bar {
     text-align: center;
     height: auto;
     overflow-y:scroll;
@@ -167,8 +171,6 @@ scroll-margin: var(--col-h-1);
     width: var(--nav-w);
     height: 100vh;
     margin: 0;
-  }
-  nav a {
     line-height: 1.5rem;;
     font-size: 1.0rem;
     font-weight: bold;
@@ -180,11 +182,7 @@ scroll-margin: var(--col-h-1);
     margin: 0 0 0 0;
     padding: 0.4em 0em ;
   }
-  div.col-2 {
-    display: block;
-      padding-top: 0;
-      margin: 0;/* var(--nav-w);*/
-  }
+
 }
 article h3 {
   display: block;

@@ -30,7 +30,7 @@
 </head>
 <body>
 
-  <nav id="navbar" class="navbar">
+  <nav id="nav-bar" class="nav-bar">
     <a href="#Document_Window_Navigator" class="nav-link">Document Window Navigator</a>
     <a href="#Document_Object_Model" class="nav-link">Document Object Model</a>
     <a href="#Basic_DOM_operation" class="nav-link">Basic DOM operation</a>
@@ -40,15 +40,27 @@
   <div class="row">
     <div class="col-1">
       <header>
-        <a href="#navbar" title="JavaScript Document Model Application Program Interface">JS DOM API</a>
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Jump<span class="caret"></span></button>
-        <ul class="dropdown-menu">
-          <li> <a href="#Document_Window_Navigator" class="nav-link">Document Window Navigator</a> </li>
-          <li> <a href="#Document_Object_Model" class="nav-link">Document Object Model</a> </li>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse-navbar" data-target="#collapse" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+        <a class="navbar-brand" href="#navbar" title="JavaScript Document Model Application Program Interface">JS DOM API</a>
+        </div>
+        <div class="collapse navbar-collapse" id="collapse-navbar">
+        <ul class="nav navbar-nav">
+          <li> <a href="#Document_Object_Model" class="nav-link">Document Object Model<span class="sr-only">(current)</span></a> </li>
           <li> <a href="#Basic_DOM_operation" class="nav-link">Basic DOM operation</a> </li>
           <li> <a href="#Event_customization" class="nav-link">Event customization</a> </li>
         <li> <a href="#Summary" class="nav-link">Summary</a> </li>
         </ul>
+      </div>
+    </div>
+    </nav>
       </header>
     </div>
 
