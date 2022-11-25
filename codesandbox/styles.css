@@ -21,6 +21,10 @@ body {
   border: none;
   background-color: rgba(55, 55, 55, 1);
 }
+.main-section {
+  margin-top: -var(--hdr-h);
+  padding-top: var(--hdr-h);
+}
 p, main p, header {
 display: inline;
 }
