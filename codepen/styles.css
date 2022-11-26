@@ -1,79 +1,81 @@
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: border-box;
 }
 html {
   font-size: 16px;
 }
 body {
+  transform: none !important;
+  font-size: 1rem;
   margin: 0;
   padding: 0;
   width: auto;
   height: auto;
   border: none;
-  font-size: 1rem;
-  line-height: 1rem;
-  --hdr-h: 2rem; /*5vh;*/
-  --nav-h: 5rem; /*15vh;*/
-  --col-h: 7rem; /*20vh;*/
-  overflow: auto;
   color: black;
+  line-height: 1rem;
+  --hdr-h: 4.5rem;
+  --nav-h: 11rem;
+  --col-h-1: calc(var(--hdr-h) + var(--nav-h))
+  overflow: auto;
   background-color: rgba(55, 55, 55, 1);
 }
-p,
-main p,
-header {
-  display: inline;
+.main-section {
+  margin-top: -var(--hdr-h);
+  padding-top: var(--hdr-h);
 }
-header p {
-  padding: 0;
+p, main p, header {
+display: inline;
 }
 main {
-  padding: 0;
   background-color: gray;
-  /* margin: -3rem 0 0 -3rem;*/
-  /*scroll-padding-top: calc(var(--col-h)  + 51rem);*/
 }
-div.row {
-  /* us-14 */
+div.row { /* us-14 */
   width: 100%;
   margin: 0;
   padding: 0;
 }
 .col-1 {
+  background:rgba(200, 200, 200, 0.5);
+  height: var(--col-h-1);
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: var(--col-h);
-  text-align: center;
-  background-color: lightgray;
-  line-height: 1rem;
-  font-size: 1rem;
-  z-index: 3;
-  border: medium solid black;
+  z-index: 999;
+  padding: 0;
+  background: rgba(200, 200, 200, 1);
+  width: 100vw;
+  height: var(--hdr-h);
+}
+.col-1 > header {
+  display: table-cell;
+  vertical-align: middle;
+}
+.col-1 > header > a {
+  color: black;
+  display: inline;
+  height: 90%;
+  text-align: middle;
+  padding: 0;
+  margin: 0;
 }
 .col-2 {
-  position: relative;
-  top: var(--col-h);
+  position: absolute;
+  top: var(--hdr-h);
   left: 0;
-  /* padding-top: var(--col-h); */
-  scroll-margin: -var(--col-h);
-  background-color: pink;
-  z-index: 2;
+  z-index: 3;
+  width: 100%;
+  scroll-padding-top: var(--hdr-h);
 }
 section {
-  display: block;
-  margin: 0.5rem 0.5rem 0.5rem 1rem;
-  padding: 0;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border: thin solid black;
   background-color: rgb(220, 220, 220);
 }
 section > p {
   margin: 1rem 1rem 2rem 3rem;
 }
-main h3,
-main h4 {
+main h3, main h4 {
   padding: none;
   margin: none;
 }
@@ -84,6 +86,7 @@ section > header {
 article {
   margin: 0;
   padding: 1rem 1rem 0 2rem;
+  border-width: thin 0 0 0;
   background-color: white;
 }
 article h3 {
@@ -93,37 +96,29 @@ article h4 {
   padding: 0em 0 0em 0em;
   margin: 0;
 }
-nav {
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: 1rem;
-  text-align: center;
-  margin: none;
-  padding: none;
-  overflow: hidden;
-  overflow-y: scroll;
-  height: var(--nav-h);
-  border: thin solid black;
-  border-width: medium 0 medium;
-  z-index: 4;
+body > nav {
+  display: block;
+  z-index: 0;
+  position: fixed;
+  top: var(--hdr-h);
+  left: 0;
 }
-.col-1 > header {
+.col-1  > header {
   display: block;
   text-align: center;
   margin: 0;
-  padding: 0;
+  padding:  0;
   height: var(--hdr-h);
+}
+.col-1 > header p {
+  line-height: 1rem;;
   margin: 0.5rem;
 }
-nav a {
-  font-weight: bold;
-  background-color: rgba(230, 220, 220, 1);
-  color: blue;
-  text-decoration: none;
-  display: block;
-  margin: 0 0 0 0;
-  padding: 0.4em 0em;
+h1 {
+  height: 1rem;
+  margin: 0.5rem;
 }
+
 section header {
   display: block;
   margin: -1rem 0rem -1rem 0rem;
@@ -143,48 +138,60 @@ section p {
   border-radius: 0.5em;
   font-weight: bolder;
 }
-.main-section {
-  scroll-margin: var(--col-h);
-}
-/* Wide screen -> 2-column, left column vertical scroll bar */
 @media (min-width: 540px) {
   body {
-    scroll-padding-top: 0;
     --nav-w: 16rem;
   }
-  .main-section {
-    scroll-margin: 0;
-  }
-  div.row {
-    /* display: flex;
-     flex-direction: row; */
-  }
-  .col-1 {
-    display: flex;
-    flex-direction: column;
-    /* height: 100%;  2 */
-    width: var(--nav-w); /* 100vw; */
-    margin: 0; /* -2rem 0 0 0;*/
-    /* overflow: scroll;  3 */
-    /*position: sticky;*/
-    border: medium solid black;
+ .col-1 {
+      margin: 0;
   }
   .col-1 > header {
-    border: medium solid black;
+      border:  medium  solid black;
   }
-  nav {
-    height: var(--nav-h);
-    border: none;
-    overflow-y: unset;
-  }
-  div.col-2 {
-    /* order: 2; */
+ div#nav-bar {
+  width: var(--nav-w);
+ } 
+ div.row {
+  z-index: 999;
+ }
+  .col-2 {
     position: absolute;
-    top: 0;
+    top: var(--hdr-h);
     left: var(--nav-w);
-    padding-top: 0;
-    margin: 3rem 0 0 0; /* var(--nav-w);*/
+    width: auto;
+    margin: 0;
+    background: rgba(200, 200, 200, 0.5);
+    z-index: 5;
   }
+  main {
+    color: black;
+  }
+  nav.nav-bar {
+    display: block;
+    text-align: center;
+    height: auto;
+    overflow-y:scroll;
+    background: lightgray;
+    position: fixed;
+    top: var(--hdr-h);
+    left: 0;
+    z-index: 999;
+    width: var(--nav-w);
+    height: 100vh;
+    line-height: 2.5rem;;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: blue;
+    text-decoration: none;
+    display: block;
+    padding: 0.4em 0em ;
+  }
+  nav a {
+    border: solid black;
+    border-width: 0 0 thin;
+    display: block;
+  }
+
 }
 article h3 {
   display: block;
@@ -209,15 +216,14 @@ article pre {
   margin: -1rem 1rem;
   padding: 1rem;
 }
-code,
-code span {
+code, code span{
   display: inline-block;
   background-color: black;
   color: yellow;
   padding: 0 1em 0 1em;
   /*margin: 0 1em 0 1em;*/
-  line-height: 1.5em;
-  font-family: monospace;
+line-height: 1.5em;
+font-family: monospace;
 }
 
 article p {
@@ -270,10 +276,3 @@ dd {
   font-weight: normal;
   margin-left: 2em;
 }
-code em {
-  color: green;
-}
-code strong {
-  color: red;
-}
-

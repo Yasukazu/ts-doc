@@ -1,25 +1,42 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
-    <title>HTML Document manipulation by Javascript</title>
-    <link rel="stylesheet" href="./styles.css">
+  <title>HTML Document manipulation by Javascript</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
+  <nav id="nav-bar" class="nav-bar">
+    <a href="#Document_Window_Navigator" class="nav-link">Document Window Navigator</a>
+    <a href="#Document_Object_Model" class="nav-link">Document Object Model</a>
+    <a href="#Basic_DOM_operation" class="nav-link">Basic DOM operation</a>
+    <a href="#Event_customization" class="nav-link">Event customization</a>
+    <a href="#Summary" class="nav-link">Summary</a>
+  </nav>
   <div class="row">
     <div class="col-1">
       <header>
-        <h4 title="JavaScript Document Model Application Program Interface">JavaScript DOM API</h4>
+        <a class="navbar-brand" href="#navbar" title="JavaScript Document Model Application Program Interface"><abbr title="JavaScript">JS</abbr> <abbr title="Document Object Model">DOM</abbr> <abbr title="Application Program Interface">API</abbr></a>
+        <div class="dropdown" id="dropdown-menu">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdown-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Section Jump <span class="caret"></span></button>
+          <ul class="dropdown-menu" aria-labelledby="about-us">
+            <li><a href="#Document_Window_Navigator" class="nav-link">Document Window Navigator</a></li>
+            <li> <a href="#Document_Object_Model" class="nav-link">Document Object Model<span class="sr-only">(current)</span></a> </li>
+            <li> <a href="#Basic_DOM_operation" class="nav-link">Basic DOM operation</a> </li>
+            <li> <a href="#Event_customization" class="nav-link">Event customization</a> </li>
+            <li> <a href="#Summary" class="nav-link">Summary</a> </li>
+          </ul>
+        </div>
       </header>
-      <nav id="navbar" class="navbar">
-        <a href="#Document_Window_Navigator" class="nav-link">Document Window Navigator</a>
-        <a href="#Document_Object_Model" class="nav-link">Document Object Model</a>
-        <a href="#Basic_DOM_operation" class="nav-link">Basic DOM operation</a>
-        <a href="#Event_customization" class="nav-link">Event customization</a>
-        <a href="#Summary" class="nav-link">Summary</a>
-      </nav>
     </div>
+
     <div class="col-2">
       <main id="main-doc">
         <section id="Document_Window_Navigator" class="main-section">
@@ -30,27 +47,30 @@
             <dl>
               <dt>Read from Document:</dt>
               <dd>Javascript can get a certain location in the document using CSS selector:<br>
-              <code>
-                const win_nav_docObj = document.querySelector('#win-nav-doc');
-              </code></dd>
+                <code>
+                  const win_nav_docObj = document.querySelector('#win-nav-doc');
+                </code>
+              </dd>
               <dt>Write into Document:</dt>
               <dd>Javascript can write into the document like this:<br>
-              <code>
-                const_win_nav_docObj.textContent = 'The Replaced text';
-              </code></dd>
+                <code>
+                  const_win_nav_docObj.textContent = 'The Replaced text';
+                </code>
+              </dd>
             </dl>
             <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">HTMLElement</a> in MDN web docs</aside>
           </article>
           <article>
             <header>Window interface:</header>
-              <dl>
+            <dl>
               <dt>Read viewport width</dt>
               <dd>To get the width into a variable 'viewportWidth' as int:<br>
                 <code>let viewportWidth = window.innerWidth;</code>
               </dd>
               <dt>Read viewport height</dt>
               <dd>To get the height into a variable 'viewportHeight' as int:<br>
-              <code>let viewportHeight = window.innerHeight;</code></dd>
+                <code>let viewportHeight = window.innerHeight;</code>
+              </dd>
             </dl>
             <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window</a> interface in MDN web docs)</aside>
           </article>
@@ -67,7 +87,7 @@
                 <code>const userLanguage = window.navigator.language;</code>
               </dd>
             </dl>
-              <aside>Language tag before hyphen is like: <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>(<em>Wikipedia</em>)</aside>
+            <aside>Language tag before hyphen is like: <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>(<em>Wikipedia</em>)</aside>
           </article>
         </section>
         <section id="Document_Object_Model" class="main-section">
@@ -79,8 +99,8 @@
             <dl>
               <dt>To get its property:</dt>
               <dd><code>document.<em>prop</em></code></dd>
-            <dt>To call its function with parameters:</dt>
-            <dd><code>document.<em>func</em>(<em>param1</em>, <em>param2</em>)</code></dd>
+              <dt>To call its function with parameters:</dt>
+              <dd><code>document.<em>func</em>(<em>param1</em>, <em>param2</em>)</code></dd>
             </dl>
           </article>
         </section>
@@ -104,7 +124,7 @@
                   document.body.append(divElem);
                 </code></dd>
             </dl>
-              <aside>Append the element node to other location cause 'move', resulting old position one is automatically removed. If neeed to duplicate the element node, use <strong>cloneNode(<em>bool</em>)</strong> method. If the <strong><em>bool</em></strong> is true then deep copy else no child copy. In case to remove the element node, use <strong>remove()</strong> method of the node itself.</aside>
+            <aside>Append the element node to other location cause 'move', resulting old position one is automatically removed. If neeed to duplicate the element node, use <strong>cloneNode(<em>bool</em>)</strong> method. If the <strong><em>bool</em></strong> is true then deep copy else no child copy. In case to remove the element node, use <strong>remove()</strong> method of the node itself.</aside>
           </article>
         </section>
         <section id="Event_customization" class="main-section">
@@ -139,22 +159,24 @@
             <p>Use <strong>querySelector</strong> to seek for a node/element in the document. The benefit is: the same way of CSS selector GLOB (like: <em>tag</em>[*=<em>class</em>]) power of naming convention as "hypen-connected".</p>
           </article>
         </section>
+
+        <footer>
+          <p>This webpage is cited from:
+            <cite><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">MDN|Learn/JavaScript/Client-side web APIs/Manipulating documents</a></cite>
+          </p>
+          <p>Also from:
+            <cite><a href="https://javascript.info/document">JAVASCRIPT.INFO|Document|.. learn to manipulate a web-page using Javascript.</a></cite>
+          </p>
+          <div class="script-write">
+            <label>Viewport width: <p class="script-write" id="viewport-width"></p></label>
+            <label>User agent: <p class="script-write" id="user-agent"></p> </label>
+            <label>User language: <p class="script-write" id="user-language"></p> </label>
+          </div>
+        </footer>
       </main>
-      <footer>
-        <p>This webpage is cited from:
-          <cite><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">MDN|Learn/JavaScript/Client-side web APIs/Manipulating documents</a></cite>
-        </p>
-        <p>Also from:
-          <cite><a href="https://javascript.info/document">JAVASCRIPT.INFO|Document|.. learn to manipulate a web-page using Javascript.</a></cite>
-        </p>
-        <div class="script-write">
-          <label>Viewport width: <p class="script-write" id="viewport-width"></p></label>
-          <label>User agent: <p class="script-write" id="user-agent"></p> </label>
-          <label>User language: <p class="script-write" id="user-language"></p> </label>
-        </div>
-      </footer>
     </div>
   </div>
   <script type="text/Javascript" src="./event-example.js" defer></script>
 </body>
+
 </html>
