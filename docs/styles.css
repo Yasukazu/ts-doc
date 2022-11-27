@@ -16,6 +16,7 @@
     line-height: 1rem;
     --hdr-h: 3rem;
     --nav-h: 3rem;
+    --nav-h-2: 6rem;
     --col-1-h: calc(var(--hdr-h) + var(--nav-h));
     overflow: auto;
     background-color: rgba(55, 55, 55, 0.4);
@@ -175,6 +176,7 @@
   }
   @media (min-width: 540px) {
     body {
+      --nav-h: 0;
       --nav-w: 16rem;
     }
    .col-1 {
