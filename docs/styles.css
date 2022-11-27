@@ -14,21 +14,26 @@
     border: none;
     color: black;
     line-height: 1rem;
-    --hdr-h: 4.5rem;
-    --nav-h: 11rem;
-    --col-h-1: calc(var(--hdr-h) + var(--nav-h))
+    --hdr-h: 3rem;
+    --nav-h: 3rem;
+    --col-1-h: calc(var(--hdr-h) + var(--nav-h));
     overflow: auto;
-    background-color: rgba(55, 55, 55, 1);
+    background-color: rgba(55, 55, 55, 0.4);
   }
+  /*
   .main-section {
-    margin-top: -var(--hdr-h);
-    padding-top: var(--hdr-h);
+    margin-top: calc(-var(--col-1-h) - 4rem);
+    padding-top: calc(var(--col-1-h) + 4rem);
+  } */
+  :target {
+    scroll-margin-top: var(--col-1-h);
   }
   p, main p, header {
   display: inline;
   }
   main {
     background-color: gray;
+    background-color: rgba(55, 55, 55, 0.4);
   }
   div.row { /* us-14 */
     width: 100%;
@@ -36,8 +41,9 @@
     padding: 0;
   }
   .col-1 {
+    border: thick dotted green;
     background:rgba(200, 200, 200, 0.5);
-    height: var(--col-h-1);
+    height: var(--col-1-h);
     position: fixed;
     top: 0;
     left: 0;
@@ -45,27 +51,52 @@
     padding: 0;
     background: rgba(200, 200, 200, 1);
     width: 100vw;
+    overflow: hidden; /* hide nav */
+    height: var(--col-1-h);
+    /*
+    display: grid;
+    grid-template:
+      "brand dropdown expand" --hdr-h
+      "nav nav nav" --nav-h
+      / 30vw  25vw 1fr;*/
+}
+  .col-1 > header {
+    vertical-align: middle;
+    width: 100%;
     height: var(--hdr-h);
   }
-  .col-1 > header {
-    display: table-cell;
-    vertical-align: middle;
-  }
-  .col-1 > header > a {
+  .col-1 .navbar-brand {
     color: black;
-    display: inline;
-    height: 90%;
+    display: inline-block;
     text-align: middle;
     padding: 0;
     margin: 0;
+    width: 30%;
+  }
+  .col-1 .dropdown {
+    display: inline-block;
+    width: 30%;
+  } 
+  .col-1 #nav-expand {
+    display: inline-block;
+    width: 30%;
+  }
+  .col-1 nav {
+    display: block;
+  }
+  .col-1 nav a {
+    display: inline;
+  }
+  .nav-link::after {
+    content: " /";
   }
   .col-2 {
     position: absolute;
-    top: var(--hdr-h);
+    top: var(--col-1-h);
     left: 0;
     z-index: 3;
     width: 100%;
-    scroll-padding-top: var(--hdr-h);
+    scroll-padding-top: var(--col-1-h);
   }
   section {
     padding: 0.5rem 0.5rem 0.5rem 1rem;
@@ -216,12 +247,12 @@
     margin: -1rem 1rem;
     padding: 1rem;
   }
+
   code, code span{
     display: inline-block;
     background-color: black;
     color: yellow;
     padding: 0 1em 0 1em;
-    /*margin: 0 1em 0 1em;*/
   line-height: 1.5em;
   font-family: monospace;
   }

@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 
 <head>
@@ -13,13 +14,7 @@
 </head>
 
 <body>
-  <nav id="nav-bar" class="nav-bar">
-    <a href="#Document_Window_Navigator" class="nav-link">Document Window Navigator</a>
-    <a href="#Document_Object_Model" class="nav-link">Document Object Model</a>
-    <a href="#Basic_DOM_operation" class="nav-link">Basic DOM operation</a>
-    <a href="#Event_customization" class="nav-link">Event customization</a>
-    <a href="#Summary" class="nav-link">Summary</a>
-  </nav>
+
   <div class="row">
     <div class="col-1">
       <header>
@@ -31,10 +26,18 @@
             <li> <a href="#Document_Object_Model" class="nav-link">Document Object Model<span class="sr-only">(current)</span></a> </li>
             <li> <a href="#Basic_DOM_operation" class="nav-link">Basic DOM operation</a> </li>
             <li> <a href="#Event_customization" class="nav-link">Event customization</a> </li>
-            <li> <a href="#Summary" class="nav-link">Summary</a> </li>
+            <li> <a href="#Debugging" class="nav-link">Debugging</a> </li>
           </ul>
         </div>
+        <button type="button" id="nav-expand">Expand Nav</button>
       </header>
+      <nav id="nav-bar" class="nav-bar">
+        <a href="#Document_Window_Navigator" class="nav-link">Document Window Navigator</a>
+        <a href="#Document_Object_Model" class="nav-link">Document Object Model</a>
+        <a href="#Basic_DOM_operation" class="nav-link">Basic DOM operation</a>
+        <a href="#Event_customization" class="nav-link">Event customization</a>
+        <a href="#Debugging" class="nav-link">Debugging</a>
+      </nav>
     </div>
 
     <div class="col-2">
@@ -47,13 +50,13 @@
             <dl>
               <dt>Read from Document:</dt>
               <dd>Javascript can get a certain location in the document using CSS selector:<br>
-                <code>
+                <code class="language-javascript">
                   const win_nav_docObj = document.querySelector('#win-nav-doc');
                 </code>
               </dd>
               <dt>Write into Document:</dt>
               <dd>Javascript can write into the document like this:<br>
-                <code>
+                <code class="lang-js">
                   const_win_nav_docObj.textContent = 'The Replaced text';
                 </code>
               </dd>
@@ -152,8 +155,17 @@
               &larr; If you click this button, then above area text becomes added [ + click-count]. </label>
           </article>
         </section>
-        <section id="Summary" class="main-section">
+        <section id="Debugging" class="main-section">
           <header>Summary</header>
+          <article>
+            <header>How to access with CSS</header>
+            <dl>
+              <dt>How to get a CSS variable</dt>
+                <dd><p>Use getComputedStyle and getPropertyValue:</p>
+                  <code>const hdr_h = getComputedStyle(document.documentElement).getPropertyValue('--hdr-h');</code></dd>
+            </dl>
+
+          </article>
           <article>
             <header>Recommended JavaScript coding:</header>
             <p>Use <strong>querySelector</strong> to seek for a node/element in the document. The benefit is: the same way of CSS selector GLOB (like: <em>tag</em>[*=<em>class</em>]) power of naming convention as "hypen-connected".</p>
@@ -168,9 +180,16 @@
             <cite><a href="https://javascript.info/document">JAVASCRIPT.INFO|Document|.. learn to manipulate a web-page using Javascript.</a></cite>
           </p>
           <div class="script-write">
-            <label>Viewport width: <p class="script-write" id="viewport-width"></p></label>
-            <label>User agent: <p class="script-write" id="user-agent"></p> </label>
-            <label>User language: <p class="script-write" id="user-language"></p> </label>
+            <dl>
+            <dt>Viewport width:</dt>
+            <dd class="script-write" id="viewport-width"></dd>
+            <dt>User agent: </dt>
+            <dd class="script-write" id="user-agent"></dd> 
+            <dt>User language: </dt>
+            <dd class="script-write" id="user-language"></dd>
+            <dt>CSS variable "--nav-h"</dt>
+            <dd class="script-write" id="nav-h"></dd>
+          </dl>
           </div>
         </footer>
       </main>

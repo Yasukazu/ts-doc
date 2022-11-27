@@ -7,6 +7,14 @@ userAgent_docObj.textContent = `${userAgent}`;
 const userLanguage = window.navigator.language;
 const userLanguage_docObj = document.querySelector('#user-language');
 userLanguage_docObj.textContent = `${userLanguage}`;
+let body = document.querySelector('body');
+let cstyle = getComputedStyle(body);
+/*cstyle = getComputedStyle(document.documentElement, null);*/
+/* alert('cstyle is :' + (cstyle ? cstyle : 'undefined')); */
+let nav_h = cstyle.getPropertyValue('--nav-h');
+debugger;
+/* alert('--nav-h is :' + (nav_h ? nav_h : 'undefined')); */
+document.querySelector('#nav-h').textContent = nav_h;
 const event_divObj = document.querySelector('#event-div');
 const event_org_txt = event_divObj.textContent;
 const btn_elem = document.querySelector("#btn-elem");
