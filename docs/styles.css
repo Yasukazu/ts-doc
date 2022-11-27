@@ -254,13 +254,17 @@
     padding: 1rem;
   }
 
-  code, code span{
+  article code {
+    display: block;
+    margin-left: 0;
+    width: 100%;
     display: inline-block;
     background-color: black;
     color: yellow;
     padding: 0 1em 0 1em;
   line-height: 1.5em;
   font-family: monospace;
+    overflow:scroll;
   }
   
   article p {
@@ -311,6 +315,6 @@
   }
   dd {
     font-weight: normal;
-    margin-left: 2em;
+    margin-left: 0em;
   }
   
