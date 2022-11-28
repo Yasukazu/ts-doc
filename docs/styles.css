@@ -181,11 +181,18 @@
   }
   @media (min-width: 540px) {
     body {
-      --nav-h: 0;
-      --nav-w: 16rem;
+      --nav-h: 9rem;
+      --nav-w: 30vw;
+      --nav-w-2: 10vw;
       --col-1-h: --hdr-h;
+      /*
       display: grid;
       grid-template-columns: var(--nav-w) 1fr;
+      grid-template-rows: var(--nav-h) 1fr;
+      grid-template:
+      "brand col-2" var(--hdr-h)
+      "nav col-2" 1fr
+      / var(--nav-w) 1fr; */
     }
     :target {
       scroll-margin-top: var(--col-1-h);
@@ -193,26 +200,29 @@
     .col-1 {
       position: fixed;
       top: 0;
+      left: 0;
       width: var(--nav-w);
-      height: 100vh;
-        margin: 0;
+      z-index: 9;
+      margin: 0;
     }
     .col-1 header {
-      height: 20vh;
-      z-index: 9;
+      height: var(--nav-h);
+      z-index: 8;
+      display: flex;
+      flex-direction: column;
     }
     .col-1 header nav {
-      height: auto;
+      display: block;
       z-index: 7;
     }
    div#nav-bar {
-      position: static;
     height: auto;
    } 
     .col-2 {
-      grid-column: 2;
+      position: absolute;
+      top: 0;
+      left: var(--nav-w);
       width: auto;
-        margin: 0;
       /* top: var(--hdr-h);
       left: var(--nav-w); */
       width: auto;
@@ -227,11 +237,8 @@
       display: block;
       text-align: center;
       height: auto;
-      overflow-y:scroll;
+      overflow:scroll;
       background: lightgray;
-      position: fixed;
-      top: var(--hdr-h);
-      left: 0;
       z-index: 999;
       width: var(--nav-w);
       height: 100vh;

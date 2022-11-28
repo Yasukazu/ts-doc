@@ -29,7 +29,7 @@
             <li> <a href="#Style_Sheet_Access" class="nav-link">Style Sheet Access</a> </li>
           </ul>
         </div>
-        <button type="button" id="nav-expand" title="Click here to expand navigation area">Change Nav height</button>
+        <button type="button" id="nav-expand" title="Click here to expand navigation area">Change Nav area</button>
       </header>
       <nav id="nav-bar" class="nav-bar">
         <a href="#Document_Window_Navigator" class="nav-link">Document Window Navigator</a>
@@ -163,6 +163,10 @@
               <dt>How to get a CSS variable</dt>
                 <dd><p>Use getComputedStyle and getPropertyValue:</p>
                   <code>const <var>hdr_h</var> = getComputedStyle(document.documentElement).getPropertyValue('--hdr-h');</code></dd>
+              <dt>Set a CSS variable</dt>
+                <dd>
+                  <code>  document.querySelector('body').style.setProperty(nav_h_str, new_nav_h_str);</code>
+                </dd>
             </dl>
           </article>
           <article>
