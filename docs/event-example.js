@@ -7,41 +7,25 @@ userAgent_docObj.textContent = `${userAgent}`;
 const userLanguage = window.navigator.language;
 const userLanguage_docObj = document.querySelector('#user-language');
 userLanguage_docObj.textContent = `${userLanguage}`;
+
+const cbody = getComputedStyle(document.querySelector('body'));
+const nav_h = cbody.getPropertyValue("--nav-h");
+const nav_h_2 = cbody.getPropertyValue("--nav-h-2");
+const nav_w = cbody.getPropertyValue("--nav-w");
+const nav_w_2 = cbody.getPropertyValue("--nav-w-2");
 const nav_expand_button = document.querySelector("button#nav-expand");
-const nav_h_str = '--nav-h';
-const num_unit_re = /\s*(\d+)(\w*)/;
-const expanded_nav_h = 10;
-const expanded_unit = 'rem';
-let expanded = false;
-let nav_h_val = 0;
-let nav_h_unit = '';
+const nav_shrink_button = document.querySelector("button#nav-shrink");
+const pc_media = "(min-width: 540px)";
+const dbody = document.querySelector('body').style;
 nav_expand_button.onclick = () => {
-  if (expanded) {
-    let new_nav_h_str = nav_h_val + nav_h_unit;
-    document.querySelector('body').style.setProperty(nav_h_str, new_nav_h_str);
-    expanded = false;
-    return;
-  }
-  const cbody = getComputedStyle(document.querySelector('body'));
-  nav_h = cbody.getPropertyValue(nav_h_str);
-  let num_unit = num_unit_re.exec(nav_h);
-  if (num_unit.length > 2) {
-    nav_h_val = parseInt(num_unit[1]);
-    nav_h_unit = num_unit[2];
-  }
-  let new_nav_h_str = expanded_nav_h + expanded_unit;
-  document.querySelector('body').style.setProperty(nav_h_str, new_nav_h_str);
-  expanded = true;
+  const isPC = window.matchMedia(pc_media).matches;
+  const dst = "--nav-" + (isPC ? 'w' : 'h');
+  const src_val = isPC ? nav_w : nav_h;
+  dbody.setProperty(dst, src_val);
 }
-const event_divObj = document.querySelector('#event-div');
-const event_org_txt = event_divObj.textContent;
-const btn_elem = document.querySelector("#btn-elem");
-let btn_counter = 0;
-          btn_elem.onclick = function() {
-            btn_counter += 1;
-            event_divObj.textContent = `${event_org_txt} + ${btn_counter}`;
-          }
-let body = document.querySelector('body');
-let cstyle = getComputedStyle(body);
-nav_h = cstyle.getPropertyValue('--nav-h');
-document.querySelector('#nav-h').textContent = nav_h;
+nav_shrink_button.onclick = () => {
+  const isPC = window.matchMedia(pc_media).matches;
+  const dst = "--nav-" + (isPC ? 'w' : 'h');
+  const src_val = isPC ? nav_w_2 : nav_h_2;
+  dbody.setProperty(dst, src_val);
+}

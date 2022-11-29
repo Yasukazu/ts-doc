@@ -15,8 +15,8 @@
     color: black;
     line-height: 1rem;
     --hdr-h: 3rem;
-    --nav-h: 3rem;
-    --nav-h-2: 6rem;
+    --nav-h: 6rem;
+    --nav-h-2: 3rem;
     --col-1-h: calc(var(--hdr-h) + var(--nav-h));
     overflow: auto;
     background-color: rgba(55, 55, 55, 0.4);
@@ -82,9 +82,9 @@
     display: inline-block;
     width: 30%;
   } 
-  .col-1 #nav-expand {
+  button#nav-expand {
     display: inline-block;
-    width: 30%;
+    width: auto;
   }
   .col-1 nav {
     background-color: lightgray;

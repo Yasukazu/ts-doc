@@ -1,0 +1,8 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+body {
+  --hdr-h: 3rem;
+  --nav-h: 2rem;
+  --col-1-h: calc(var(--hdr-h) + var(--nav-h));
+}
