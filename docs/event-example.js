@@ -17,15 +17,22 @@ const nav_expand_button = document.querySelector("button#nav-expand");
 const nav_shrink_button = document.querySelector("button#nav-shrink");
 const pc_media = "(min-width: 540px)";
 const dbody = document.querySelector('body').style;
+let isShrink = false;
 nav_expand_button.onclick = () => {
-  const isPC = window.matchMedia(pc_media).matches;
-  const dst = "--nav-" + (isPC ? 'w' : 'h');
-  const src_val = isPC ? nav_w : nav_h;
-  dbody.setProperty(dst, src_val);
+  if (isShrink) {
+    const isPC = window.matchMedia(pc_media).matches;
+    const dst = "--nav-" + (isPC ? 'w' : 'h');
+    const src_val = isPC ? nav_w : nav_h;
+    dbody.setProperty(dst, src_val);
+    isShrink = false;
+  }
 }
 nav_shrink_button.onclick = () => {
-  const isPC = window.matchMedia(pc_media).matches;
-  const dst = "--nav-" + (isPC ? 'w' : 'h');
-  const src_val = isPC ? nav_w_2 : nav_h_2;
-  dbody.setProperty(dst, src_val);
+  if (!isShrink) {
+    const isPC = window.matchMedia(pc_media).matches;
+    const dst = "--nav-" + (isPC ? 'w' : 'h');
+    const src_val = isPC ? nav_w_2 : nav_h_2;
+    dbody.setProperty(dst, src_val);
+    isShrink = true;
+  }
 }
