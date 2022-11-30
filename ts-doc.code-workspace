@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../offset-scroll-pos"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ts-doc"
+	}
+}
