@@ -1,0 +1,10 @@
+        <div class="dropdown" id="dropdown-menu">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdown-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Section Jump <span class="caret"></span></button>
+          <ul class="dropdown-menu" aria-labelledby="about-us">
+            <li><a href="#Document_Window_Navigator" class="nav-link">Document Window Navigator</a></li>
+            <li> <a href="#Document_Object_Model" class="nav-link">Document Object Model<span class="sr-only">(current)</span></a> </li>
+            <li> <a href="#Basic_DOM_operation" class="nav-link">Basic DOM operation</a> </li>
+            <li> <a href="#Event_customization" class="nav-link">Event customization</a> </li>
+            <li> <a href="#Style_Sheet_Access" class="nav-link">Style Sheet Access</a> </li>
+          </ul>
+        </div>
