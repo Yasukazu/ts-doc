@@ -15,19 +15,17 @@ body {
     color: black;
     line-height: 1rem;
     --hdr-h: 3rem;
-    --nav-h: 6rem;
-    --nav-h-2: 3rem;
-    --col-1-h: calc(var(--hdr-h) + var(--nav-h));
     overflow: auto;
     background-color: rgba(55, 55, 55, 0.4);
 }
 
 #nav-bar {
   display: none;
+  height: auto;
 }
 
 :target {
-    scroll-margin-top: var(--col-1-h);
+    scroll-margin-top: var(--hdr-h);
 }
 
 p, main p, header {
@@ -53,7 +51,7 @@ div.row { /* us-14 */
 .col-1 {
     position: sticky;
     background:rgba(200, 200, 200, 0.5);
-    height: var(--col-1-h);
+    height: auto;
     position: sticky;
     top: 0;
     left: 0;
@@ -62,13 +60,7 @@ div.row { /* us-14 */
     background: rgba(200, 200, 200, 1);
     width: 100vw;
     overflow: hidden; /* hide nav */
-    height: var(--col-1-h);
-    /*
-    display: grid;
-    grid-template:
-      "brand dropdown expand" --hdr-h
-      "nav nav nav" --nav-h
-      / 30vw  25vw 1fr;*/
+
 }
 
 .col-1 > header {
@@ -77,7 +69,7 @@ div.row { /* us-14 */
     height: var(--hdr-h);
 }
 
-.col-1 .navbar-brand {
+#navbar-brand {
     color: black;
     display: inline-block;
     text-align: middle;
@@ -91,7 +83,7 @@ div.row { /* us-14 */
     width: 30%;
 } 
 
-button#nav-expand {
+#nav-on-off {
     display: inline-block;
     width: auto;
 }
@@ -115,11 +107,11 @@ button#nav-expand {
 
 .col-2 {
     position: static;
-    top: var(--col-1-h);
+    top: var(--hdr-h);
     left: 0;
     z-index: 3;
     width: 100%;
-    scroll-padding-top: var(--col-1-h);
+    scroll-padding-top: var(--hdr-h);
 }
 
 section {
@@ -295,14 +287,11 @@ dd {
 
 @media (min-width: 540px) {
     body {
-      --nav-h: 9rem;
       --nav-w: 30vw;
-      --nav-w-2: 10vw;
-      --col-1-h: --hdr-h;
     }
 
     :target {
-      scroll-margin-top: var(--col-1-h);
+      scroll-margin-top: 0;
     }
 
     .col-1 {
@@ -316,7 +305,6 @@ dd {
       flex-direction: column;
     }
     .col-1 header {
-      height: var(--nav-h);
       z-index: 8;
       display: flex;
       flex-direction: column;
@@ -330,8 +318,6 @@ dd {
       top: 0;
       left: var(--nav-w);
       width: auto;
-      /* top: var(--hdr-h);
-      left: var(--nav-w); */
       width: auto;
       margin: 0;
       background: rgba(200, 200, 200, 0.5);
