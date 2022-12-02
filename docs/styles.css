@@ -1,10 +1,10 @@
 *, *:before, *:after {
     box-sizing: border-box;
-  }
-  html {
+}
+html {
     font-size: 16px;
-  }
-  body {
+}
+body {
     transform: none !important;
     font-size: 1rem;
     margin: 0;
@@ -20,32 +20,37 @@
     --col-1-h: calc(var(--hdr-h) + var(--nav-h));
     overflow: auto;
     background-color: rgba(55, 55, 55, 0.4);
-  }
-  /*
-  .main-section {
-    margin-top: -var(--col-1-h) - 4rem;
-    padding-top: var(--col-1-h) + 4rem;
-  } */
-  :target {
+}
+
+#nav-bar {
+  display: none;
+}
+
+:target {
     scroll-margin-top: var(--col-1-h);
-  }
-  p, main p, header {
+}
+
+p, main p, header {
   display: inline;
-  }
-  body > header {
+}
+
+body > header {
     top: 0;
     z-index: 999;
-  }
-  main {
+}
+
+main {
     background-color: gray;
     background-color: rgba(55, 55, 55, 0.4);
-  }
-  div.row { /* us-14 */
+}
+
+div.row { /* us-14 */
     width: 100%;
     margin: 0;
     padding: 0;
-  }
-  .col-1 {
+}
+
+.col-1 {
     position: sticky;
     background:rgba(200, 200, 200, 0.5);
     height: var(--col-1-h);
@@ -65,112 +70,133 @@
       "nav nav nav" --nav-h
       / 30vw  25vw 1fr;*/
 }
-  .col-1 > header {
+
+.col-1 > header {
     vertical-align: middle;
     width: 100%;
     height: var(--hdr-h);
-  }
-  .col-1 .navbar-brand {
+}
+
+.col-1 .navbar-brand {
     color: black;
     display: inline-block;
     text-align: middle;
     padding: 0;
     margin: 0;
     width: 25%;
-  }
-  .col-1 .dropdown {
+}
+
+.col-1 .dropdown {
     display: inline-block;
     width: 30%;
-  } 
-  button#nav-expand {
+} 
+
+button#nav-expand {
     display: inline-block;
     width: auto;
-  }
-  .col-1 nav {
+}
+
+.col-1 nav {
     background-color: lightgray;
     display: block;
     justify-content: center;
     align-content: center;
       overflow:scroll;
-  }
-  .col-1 nav a {
+}
+
+.col-1 nav a {
     border: thin solid gray;
     display: block;
-  }
-  .nav-link::after {
+}
+
+.nav-link::after {
     content: " →";
-  }
-  .col-2 {
+}
+
+.col-2 {
     position: static;
     top: var(--col-1-h);
     left: 0;
     z-index: 3;
     width: 100%;
     scroll-padding-top: var(--col-1-h);
-  }
-  section {
+}
+
+section {
     padding: 0.5rem 0.5rem 0.5rem 1rem;
     border: thin solid black;
     background-color: rgb(220, 220, 220);
-  }
-  section > p {
+}
+
+section > p {
     margin: 1rem 1rem 2rem 3rem;
-  }
-  main h3, main h4 {
+}
+
+main h3, main h4 {
     padding: none;
     margin: none;
-  }
-  section > header {
+}
+
+section > header {
     padding: -1rem 1rem 1rem 2rem;
     margin: -1rem 1rem 0 2rem;
-  }
-  article {
+}
+
+article {
     margin: 0;
     padding: 1rem 1rem 0 2rem;
     border-width: thin 0 0 0;
     background-color: white;
-  }
-  article h3 {
+}
+
+article h3 {
     margin: -1rem 1rem -1rem 2rem;
-  }
-  article h4 {
+}
+
+article h4 {
     padding: 0em 0 0em 0em;
     margin: 0;
-  }
-  body > nav {
+}
+
+body > nav {
     display: block;
     z-index: 0;
     position: fixed;
     top: var(--hdr-h);
     left: 0;
-  }
-  .col-1  > header {
+}
+
+.col-1  > header {
     display: block;
     text-align: center;
     margin: 0;
     padding:  0;
     height: var(--hdr-h);
-  }
-  .col-1 > header p {
+}
+
+.col-1 > header p {
     line-height: 1rem;;
     margin: 0.5rem;
-  }
-  h1 {
+}
+
+h1 {
     height: 1rem;
     margin: 0.5rem;
-  }
+}
   
-  section header {
+section header {
     display: block;
     margin: -1rem 0rem -1rem 0rem;
     padding: 1rem 0rem 1rem 2rem;
     font-size: larger;
     font-weight: bold;
-  }
-  section p {
+}
+
+section p {
     margin: 0 0 0 5rem;
-  }
-  #btn-elem {
+}
+
+#btn-elem {
     border: thin solid black;
     background-color: yellow;
     height: 2em;
@@ -178,25 +204,107 @@
     padding: 0 1em 0 1em;
     border-radius: 0.5em;
     font-weight: bolder;
-  }
-  @media (min-width: 540px) {
+}
+article h3 {
+  display: block;
+  margin: 3rem 1rem 1rem 1rem;
+}
+article h4 {
+  margin: 3em 1em 0em 2em;
+}
+
+article ul {
+  margin: 0;
+  padding: 0;
+}
+article li {
+  margin: 0;
+  padding: 0;
+}
+article pre {
+  display: block;
+  background-color: black;
+  color: yellow;
+  margin: -1rem 1rem;
+  padding: 1rem;
+}
+
+article code {
+  display: block;
+  margin-left: 0;
+  width: 100%;
+  display: inline-block;
+  background-color: black;
+  color: yellow;
+  padding: 0 1em 0 1em;
+line-height: 1.5em;
+font-family: monospace;
+  overflow:scroll;
+}
+
+article p {
+  margin: 1em 1em 1em 3em;
+}
+article aside {
+  margin: 2rem 1rem 1rem 1rem;
+  font-style: italic;
+}
+article label {
+  display: block;
+  margin-top: 1rem;
+}
+article div {
+  margin-top: 2em;
+}
+#event-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: magenta;
+  background-color: green;
+  width: 8rem;
+  height: 4rem;
+}
+footer {
+  display: block;
+  background-color: inherit;
+  background-color: lightgray;
+  border: medium solid gray;
+  margin: 0rem;
+}
+footer label {
+  background-color: lightgreen;
+}
+article > header {
+  margin-left: 0;
+  padding-left: 0;
+}
+dl {
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+dt {
+  margin-top: 0.5rem;
+  font-weight: medium;
+  margin-left: 1em;
+}
+dd {
+  font-weight: normal;
+  margin-left: 0em;
+}
+
+@media (min-width: 540px) {
     body {
       --nav-h: 9rem;
       --nav-w: 30vw;
       --nav-w-2: 10vw;
       --col-1-h: --hdr-h;
-      /*
-      display: grid;
-      grid-template-columns: var(--nav-w) 1fr;
-      grid-template-rows: var(--nav-h) 1fr;
-      grid-template:
-      "brand col-2" var(--hdr-h)
-      "nav col-2" 1fr
-      / var(--nav-w) 1fr; */
     }
+
     :target {
       scroll-margin-top: var(--col-1-h);
     }
+
     .col-1 {
       position: fixed;
       top: 0;
@@ -217,9 +325,6 @@
       display: block;
       z-index: 7;
     }
-   div#nav-bar {
-    height: auto;
-   } 
     .col-2 {
       position: absolute;
       top: 0;
@@ -235,7 +340,7 @@
     main {
       color: black;
     }
-    nav.nav-bar {
+    #nav-bar {
       display: block;
       text-align: center;
       height: auto;
@@ -249,7 +354,6 @@
       font-weight: bold;
       color: blue;
       text-decoration: none;
-      display: block;
       padding: 0.4em 0em ;
     }
     nav a {
@@ -258,92 +362,4 @@
       display: block;
     }
   
-  }
-  article h3 {
-    display: block;
-    margin: 3rem 1rem 1rem 1rem;
-  }
-  article h4 {
-    margin: 3em 1em 0em 2em;
-  }
-  
-  article ul {
-    margin: 0;
-    padding: 0;
-  }
-  article li {
-    margin: 0;
-    padding: 0;
-  }
-  article pre {
-    display: block;
-    background-color: black;
-    color: yellow;
-    margin: -1rem 1rem;
-    padding: 1rem;
-  }
-
-  article code {
-    display: block;
-    margin-left: 0;
-    width: 100%;
-    display: inline-block;
-    background-color: black;
-    color: yellow;
-    padding: 0 1em 0 1em;
-  line-height: 1.5em;
-  font-family: monospace;
-    overflow:scroll;
-  }
-  
-  article p {
-    margin: 1em 1em 1em 3em;
-  }
-  article aside {
-    margin: 2rem 1rem 1rem 1rem;
-    font-style: italic;
-  }
-  article label {
-    display: block;
-    margin-top: 1rem;
-  }
-  article div {
-    margin-top: 2em;
-  }
-  #event-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: magenta;
-    background-color: green;
-    width: 8rem;
-    height: 4rem;
-  }
-  footer {
-    display: block;
-    background-color: inherit;
-    background-color: lightgray;
-    border: medium solid gray;
-    margin: 0rem;
-  }
-  footer label {
-    background-color: lightgreen;
-  }
-  article > header {
-    margin-left: 0;
-    padding-left: 0;
-  }
-  dl {
-    margin: 0.5rem 0;
-    font-weight: bold;
-  }
-  dt {
-    margin-top: 0.5rem;
-    font-weight: medium;
-    margin-left: 1em;
-  }
-  dd {
-    font-weight: normal;
-    margin-left: 0em;
-  }
-  
+}

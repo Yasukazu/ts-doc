@@ -13,19 +13,25 @@ const nav_h = cbody.getPropertyValue("--nav-h");
 const nav_h_2 = cbody.getPropertyValue("--nav-h-2");
 const nav_w = cbody.getPropertyValue("--nav-w");
 const nav_w_2 = cbody.getPropertyValue("--nav-w-2");
-const nav_expand_button = document.querySelector("button#nav-expand");
-const nav_shrink_button = document.querySelector("button#nav-shrink");
+const nav_on_off_button = document.querySelector("#nav-on-off");
+const nav_bar = document.querySelector("#nav-bar");
+debugger;
+/* nav_bar.style.display = "none"; */
 const pc_media = "(min-width: 540px)";
 const dbody = document.querySelector('body').style;
-nav_expand_button.onclick = () => {
-  const isPC = window.matchMedia(pc_media).matches;
-  const dst = "--nav-" + (isPC ? 'w' : 'h');
-  const src_val = isPC ? nav_w : nav_h;
-  dbody.setProperty(dst, src_val);
-}
-nav_shrink_button.onclick = () => {
-  const isPC = window.matchMedia(pc_media).matches;
-  const dst = "--nav-" + (isPC ? 'w' : 'h');
-  const src_val = isPC ? nav_w_2 : nav_h_2;
-  dbody.setProperty(dst, src_val);
+let navOn = false;
+nav_on_off_button.onclick = () => {
+  if (nav_bar.style.display == 'block') {
+    nav_bar.style.display = 'none';
+  } else {
+    nav_bar.style.display = 'block';
+  }
+  /*
+  if (!shrinking) {
+    const isPC = window.matchMedia(pc_media).matches;
+    const dst = "--nav-" + (isPC ? 'w' : 'h');
+    const src_val = isPC ? nav_w_2 : nav_h_2;
+    dbody.setProperty(dst, src_val);
+    shrinking = true;
+  } */
 }
