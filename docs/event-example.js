@@ -6,4 +6,3 @@ const userAgent_docObj = document.querySelector('#user-agent');
 userAgent_docObj.textContent = `${userAgent}`;
 const userLanguage = window.navigator.language;
 const userLanguage_docObj = document.querySelector('#user-language');
-userLanguage_docObj.textContent = `${userLanguage}`;
