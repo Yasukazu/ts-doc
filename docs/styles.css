@@ -19,11 +19,6 @@ body {
     background-color: rgba(55, 55, 55, 0.4);
 }
 
-#nav-bar {
-  display: none;
-  height: auto;
-}
-
 :target {
     scroll-margin-top: var(--hdr-h);
 }
@@ -88,15 +83,18 @@ div.row { /* us-14 */
     width: auto;
 }
 
-.col-1 nav {
-    background-color: lightgray;
-    display: block;
+#nav-bar {
+    display: none;
+    height: auto;
+    background-color: rgba(200, 200, 200, 0.5);
+    text-align: right;
     justify-content: center;
     align-content: center;
-      overflow:scroll;
+    overflow:scroll;
 }
 
-.col-1 nav a {
+.nav-link {
+    background-color: inherit;
     border: thin solid gray;
     display: block;
 }
