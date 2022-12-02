@@ -74,6 +74,7 @@ div.row { /* us-14 */
 .col-1 .dropdown {
     display: inline-block;
     width: 30%;
+
 } 
 
 #nav-on-off {
@@ -86,6 +87,7 @@ div.row { /* us-14 */
     height: auto;
     background-color: rgba(200, 200, 200, 0.5);
     text-align: right;
+
     justify-content: center;
     align-content: center;
     overflow:scroll;
@@ -284,6 +286,7 @@ dd {
 @media (min-width: 540px) {
     body {
       --nav-w: 30vw;
+      --hdr-h: 10rem;
     }
 
     :target {
