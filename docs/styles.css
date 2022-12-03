@@ -55,6 +55,7 @@ div.col-1 {
     height: var(--hdr-h);
     line-height: 80%;
     font-size: 80%;
+    overflow: hidden;
 }
 
 #navbar-brand {
@@ -65,25 +66,31 @@ div.col-1 {
     margin: 0;
 }
 
-#nav-on-off {
+button#nav-on-off {
     display: inline-block;
     width: auto;
 }
 
-#nav-bar {
-    display: block;
+nav#nav-bar {
+    width: 100%;
     height: auto;
-    background-color: rgba(200, 200, 200, 0.5);
+    background-color: rgba(200, 200, 200, 0.9);
     text-align: right;
     justify-content: center;
     align-content: center;
     overflow:scroll;
+    display: flex;
+    flex-direction: row;
 }
 
 a.nav-link {
+  line-height: 0.7em;
+  font-size: 0.8em;
+  margin: 0;
+  padding: 0.2em;
     background-color: inherit;
     border: thin solid gray;
-    display: block;
+    display: inline-block;
 }
 
 a.nav-link::after {
@@ -271,9 +278,6 @@ dd {
 }
 
 @media (min-width: 540px) {
-    :target {
-      scroll-margin-top: 0;
-    }
 /*
     div.col-1 {
       position: fixed;
@@ -288,7 +292,7 @@ dd {
       position: absolute;
       top: 0;
       left: var(--nav-w);
-      width: calc(100vh - var(--nav-w));
+      width: auto; /* calc(100vh - var(--nav-w)); */
       margin: 0;
       background: rgba(200, 200, 200, 0.5);
       z-index: 5;
