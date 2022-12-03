@@ -2,7 +2,6 @@ const nav_on_off_button = document.querySelector("#nav-on-off");
 const nav_bar = document.querySelector("#nav-bar");
 let is_pc_media = false;
 
-
 const col_2 = document.querySelector("div.col-2");
 const nav_w = getComputedStyle(document.documentElement).getPropertyValue('--nav-w');
 debugger;

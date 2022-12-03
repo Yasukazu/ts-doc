@@ -1,13 +1,12 @@
 *, *:before, *:after {
     box-sizing: border-box;
 }
-:root {
-    --hdr-h: 1.6rem;
-     --nav-w: 30vw;
-}
 
-html {
-    font-size: 16px;
+:root {
+  font-size: 16px;
+  --hdr-h: 1.6rem;
+  --nav-h: 5rem;
+  --nav-w: 30vw;
 }
 
 body {
@@ -25,7 +24,7 @@ body {
 }
 
 :target {
-    scroll-margin-top: var(--hdr-h);
+    scroll-margin-top: calc(var(--hdr-h) + var(--nav-h));
 }
 
 p, main p, header {
@@ -43,6 +42,7 @@ main {
 }
 
 div.col-1 {
+  border: thick dashed blue;
     background:rgba(200, 200, 200, 1);
     position: fixed;
     top: 0;
@@ -52,45 +52,43 @@ div.col-1 {
     overflow: hidden; /* hide nav */
     vertical-align: middle;
     width: 100%;
-    height: var(--hdr-h);
-    line-height: 80%;
-    font-size: 80%;
+    height: calc(var(--hdr-h) + var(--nav-h));
+    line-height: 1rem;
+    font-size: 0.8rem;
     overflow: hidden;
 }
 
 #navbar-brand {
     color: black;
-    display: inline-block;
     /* text-align: middle; */
     padding: 0;
     margin: 0;
 }
 
 button#nav-on-off {
-    display: inline-block;
     width: auto;
+    line-height: 0.8rem;
+    font-size: 0.7rem
 }
 
-nav#nav-bar {
+#nav-bar {
     width: 100%;
-    height: auto;
+    height: var(--nav-h);
     background-color: rgba(200, 200, 200, 0.9);
     text-align: right;
     justify-content: center;
     align-content: center;
     overflow:scroll;
-    display: flex;
-    flex-direction: row;
 }
 
-a.nav-link {
-  line-height: 0.7em;
-  font-size: 0.8em;
+.nav-link {
+    line-height: 1em;
+    font-size: 0.8em;
   margin: 0;
   padding: 0.2em;
     background-color: inherit;
     border: thin solid gray;
-    display: inline-block;
+    display: block;
 }
 
 a.nav-link::after {
@@ -98,12 +96,13 @@ a.nav-link::after {
 }
 
 div.col-2 {
-    position: static;
-    margin-top: var(--hdr-h);
+    position: absolute;
+    top: calc(var(--hdr-h) + var(--nav-h));
     left: 0;
+    margin-top: calc(var(--hdr-h) + var(--nav-h));
     z-index: 3;
     width: auto;
-    scroll-padding-top: var(--hdr-h);
+    /* scroll-padding-top: var(--hdr-h); */
 }
 
 section {
@@ -278,7 +277,6 @@ dd {
 }
 
 @media (min-width: 540px) {
-/*
     div.col-1 {
       position: fixed;
       top: 0;
@@ -287,12 +285,11 @@ dd {
       z-index: 9;
       margin: 0;
     }
-*/
     div.col-2 {
       position: absolute;
       top: 0;
       left: var(--nav-w);
-      width: auto; /* calc(100vh - var(--nav-w)); */
+      width: calc(100vh - var(--nav-w));
       margin: 0;
       background: rgba(200, 200, 200, 0.5);
       z-index: 5;
