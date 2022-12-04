@@ -8,7 +8,6 @@ const nav_w = getComputedStyle(document.documentElement).getPropertyValue('--nav
 index_is_on = true;
 
 const navlinks = document.querySelectorAll("a.nav-link");
-debugger;
 navlinks.forEach((a) => a.onclick = close_nav_a_clicked);
 
 function close_nav_a_clicked() {
