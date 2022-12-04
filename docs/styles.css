@@ -5,7 +5,7 @@
 :root {
     font-size: 16px;
     --hdr-h: 1.6rem;
-    --nav-w: 30vw;
+    --nav-w: 25vw;
 }
 
 html {
@@ -31,27 +31,33 @@ body {
 }
 
 div.col-1 {
-    background-color: rgba(200, 200, 200, 1);
-    height: auto;
+    width: 100%;
 }
 
 div.col-1 * {
     z-index: 9;
+    height: auto;
+    width: auto;
 }
 
-.col-1 > header {
-    background: rgba(200, 200, 200, 1);
+div.col-1 > header {
+    background-color: rgba(100, 100, 110, 1);
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
     height: var(--hdr-h);
     line-height: 1rem;
     display: flex;
     justify-content: space-between;
 }
 
-.col-1 > header > button {
+#header-brand {
+    color: lightgray;
+}
+
+div.col-1 > header > button {
+    background-color: green;
+    color :white;
     line-height: 80%;
 }
 
@@ -68,6 +74,7 @@ div.col-1 * {
 #nav-bar a {
     z-index: 5;
     background-color: white;
+
     display: inline-block;
     border: thin solid black;
     border-radius: 0.2em;
@@ -84,18 +91,16 @@ div.col-2 {
     z-index: 1;
     position: absolute;
     top: var(--hdr-h);
+    left: 0;
     width: 100%;
+    margin: 0;
 }
 div.col-2  * {
-    width: inherit;
+    width: 100%;
 }
 div.col-2 > * {
     padding: 0 0 0 1em;
 }
 div.col-2 > * > * {
     padding: 0 0 0 2em;
-}
-
-.main-section > header {
-    font-weight: bolder;
 }
