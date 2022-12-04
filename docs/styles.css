@@ -40,7 +40,7 @@ div.col-1 * {
 }
 
 .col-1 > header {
-    border: medium dotted blue;
+    background: rgba(200, 200, 200, 1);
     position: fixed;
     top: 0;
     left: 0;

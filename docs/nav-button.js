@@ -4,12 +4,15 @@ let is_pc_media = false;
 
 const col_2 = document.querySelector("div.col-2");
 const nav_w = getComputedStyle(document.documentElement).getPropertyValue('--nav-w');
-debugger;
 
 index_is_on = true;
 
-function turn_nav_on() {
+const navlinks = document.querySelectorAll("a.nav-link");
+debugger;
+navlinks.forEach((a) => a.onclick = close_nav_a_clicked);
 
+function close_nav_a_clicked() {
+    nav_bar.style.display = 'none';
 }
 
 nav_on_off_button.onclick = () => {
