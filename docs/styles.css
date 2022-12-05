@@ -139,3 +139,17 @@ div[class|="col"] h3 {
     border-top: thin solid darkgray; 
     background-color: rgb(200, 200, 200);
 }
+
+strong {
+    display: inline;
+}
+section > h2::before {
+    content: "\00a7"; /* &sect;" */
+    font-size: 80%;
+    vertical-align: super;
+}
+article > h3::before {
+    content: "\2020"; /* &dagger;" */
+    font-size: 80%;
+    vertical-align: super;
+}
