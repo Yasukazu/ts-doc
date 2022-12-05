@@ -15,10 +15,8 @@
 <body>
     <div class="col-1">
       <header>
-
-        <a id="navbar-brand" href="#navbar" title="JavaScript Document Model Application Program Interface"><abbr title="JavaScript">JS</abbr> <abbr title="Document Object Model">DOM</abbr> <abbr title="Application Program Interface">API</abbr></a>
+        <a id="header-brand" href="#Document_Window_Navigator" title="JavaScript Document Model Application Program Interface"><abbr title="JavaScript">JS</abbr> <abbr title="Document Object Model">DOM</abbr> <abbr title="Application Program Interface">API</abbr></a>
         <button type="button" id="nav-on-off" title="Click here to on / off Index">Index On / Off</button>
-
       </header>
       <nav id="nav-bar" class="nav-bar">
         <a href="#Document_Window_Navigator" class="nav-link">Document Window Navigator</a>
@@ -32,13 +30,13 @@
     <div class="col-2">
       <main id="main-doc">
         <section id="Document_Window_Navigator" class="main-section">
-          <header>Document / Window / Navigator</header>
-          <p>Javascript can read and write HTML <strong>Document</strong>. And also get information about the <strong>Window</strong> rendered by the web browser. And also information about the web browser itself(<strong>Navigator</strong>)</p>
+          <h2>Document / Window / Navigator</h2>
+          <p>Javascript can read and write HTML<strong>Document</strong>. And also get information about the<strong>Window</strong>rendered by the web browser. And also information about the <u>web browser itself</u>(<strong>Navigator</strong>).</p>
           <article>
-            <header>Document interface:</header>
+            <h3>Document interface:</h3>
             <dl>
               <dt>Read from Document:</dt>
-              <dd>Javascript can get a certain location in the document using CSS selector:<br>
+              <dd>Javascript can get a specific element in the document using CSS selector:<br>
                 <code class="language-javascript">
                   const win_nav_docObj = document.querySelector('#win-nav-doc');
                 </code>
@@ -46,14 +44,14 @@
               <dt>Write into Document:</dt>
               <dd>Javascript can write into the document like this:<br>
                 <code class="lang-js">
-                  const_win_nav_docObj.textContent = 'The Replaced text';
+                  win_nav_docObj.textContent = 'The Replaced text';
                 </code>
               </dd>
             </dl>
             <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">HTMLElement</a> in MDN web docs</aside>
           </article>
           <article>
-            <header>Window interface:</header>
+            <h3>Window interface:</h3>
             <dl>
               <dt>Read viewport width</dt>
               <dd>To get the width into a variable 'viewportWidth' as int:<br>
@@ -67,7 +65,7 @@
             <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window</a> interface in MDN web docs)</aside>
           </article>
           <article>
-            <header>Navigator interface:</header>
+            <h3>Navigator interface:</h3>
             <dl>
               <dt>User agent:</dt>
               <dd>Supported Javascript version depends on <strong>'user agent'</strong> that is 'web browser'(like: <em>Firefox</em>, <em>Chrome</em>, <em>Edge</em>, <em>Safari</em>)).<br>
@@ -83,7 +81,7 @@
           </article>
         </section>
         <section id="Document_Object_Model" class="main-section">
-          <header>Document Object Model</header>
+          <h2>Document Object Model</h2>
           <p>In Javascript, 'Document Object Model' is represented as Document type interface. It is called as 'DOM'.</p>
           <article>
             <p>DOM is a tree structure interface corresponds with HTML structure.<br>
@@ -97,10 +95,10 @@
           </article>
         </section>
         <section id="Basic_DOM_operation" class="main-section">
-          <header>Basic DOM operation</header>
+          <h2>Basic DOM operation</h2>
           <p>How to operate an HTML document</p>
           <article>
-            <header>Create / Append / Move / Remove a node</header>
+            <h3>Create / Append / Move / Remove a node</h3>
             <dl>
               <dt>
                 Create a new element node with a tag:
@@ -120,7 +118,7 @@
           </article>
         </section>
         <section id="Event_customization" class="main-section">
-          <header>Event customization</header>
+          <h2>Event customization</h2>
           <article>
             <p>Assigns a function to an event handler(like <em>onclick</em>) of a with-event-handler element(like <em>input</em>) of the DOM object(that is <em>document</em>):</p>
             <dl>
@@ -145,9 +143,9 @@
           </article>
         </section>
         <section id="Style_Sheet_Access" class="main-section">
-          <header>Style Sheet Access</header>
+          <h2>Style Sheet Access</h2>
           <article>
-            <header>How to access with CSS</header>
+            <h3>How to access with CSS</h3>
             <dl>
               <dt>How to get a CSS variable</dt>
                 <dd><p>Use getComputedStyle and getPropertyValue:</p>
@@ -159,7 +157,7 @@
             </dl>
           </article>
           <article>
-            <header>Recommended JavaScript coding:</header>
+            <h3>Recommended JavaScript coding:</h3>
             <p>Use <strong>querySelector</strong> to seek for a node/element in the document. The benefit is: the same way of CSS selector GLOB (like: <em>tag</em>[*=<em>class</em>]) power of naming convention as "hypen-connected".</p>
           </article>
         </section>
@@ -186,8 +184,8 @@
         </footer>
       </main>
     </div>
-  <script type="text/Javascript" src="./nav-button.js"></script>
   <script type="text/Javascript" src="./event-example.js"></script>
+  <script type="text/Javascript" src="./nav-button.js"></script>
 </body>
 
 </html>
