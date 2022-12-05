@@ -31,12 +31,12 @@
       <main id="main-doc">
         <section id="Document_Window_Navigator" class="main-section">
           <h2>Document / Window / Navigator</h2>
-          <p>Javascript can read and write HTML <strong>Document</strong>. And also get information about the <strong>Window</strong> rendered by the web browser. And also information about the web browser itself(<strong>Navigator</strong>)</p>
+          <p>Javascript can read and write HTML<strong>Document</strong>. And also get information about the<strong>Window</strong>rendered by the web browser. And also information about the <u>web browser itself</u>(<strong>Navigator</strong>).</p>
           <article>
             <h3>Document interface:</h3>
             <dl>
               <dt>Read from Document:</dt>
-              <dd>Javascript can get a certain location in the document using CSS selector:<br>
+              <dd>Javascript can get a specific element in the document using CSS selector:<br>
                 <code class="language-javascript">
                   const win_nav_docObj = document.querySelector('#win-nav-doc');
                 </code>
@@ -44,7 +44,7 @@
               <dt>Write into Document:</dt>
               <dd>Javascript can write into the document like this:<br>
                 <code class="lang-js">
-                  const_win_nav_docObj.textContent = 'The Replaced text';
+                  win_nav_docObj.textContent = 'The Replaced text';
                 </code>
               </dd>
             </dl>
