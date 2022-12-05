@@ -63,7 +63,6 @@ div.col-1 > header > button {
 
 #nav-bar {
     z-index: 7;
-    border: medium dashed green;
     position: fixed;
     top: var(--hdr-h);
     left: 0;
@@ -103,4 +102,40 @@ div.col-2 > * {
 }
 div.col-2 > * > * {
     padding: 0 0 0 2em;
+}
+
+div.col-2 * { 
+  margin: 0;
+  padding: 0 0.5em;
+}
+div[class|="col"] { 
+  width: 100%;
+
+}
+div.col-2 p, .col-2 dd { 
+  width: 100%;
+  text-indent: 1em;
+}
+div[class|="col"] h2 { 
+    border: thin dashed yellow;
+    line-height: 1.4rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 1em 0 0 0;
+}
+
+div[class|="col"] h3 { 
+    margin: 1em 0 0 0;
+    line-height: 1.2rem;
+    font-size: 1.0rem;
+    font-weight: bold;
+}
+
+.col-2 section {
+    border-top: medium solid black; 
+    background-color: rgb(200, 200, 200);
+}
+.col-2 article {
+    border-top: thin solid darkgray; 
+    background-color: rgb(200, 200, 200);
 }
