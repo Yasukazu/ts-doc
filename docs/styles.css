@@ -153,3 +153,6 @@ article > h3::before {
     font-size: 80%;
     vertical-align: super;
 }
+dt::after {
+    content: "→";
+}

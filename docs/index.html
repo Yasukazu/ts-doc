@@ -67,10 +67,13 @@
           <article>
             <h3>Navigator interface:</h3>
             <dl>
-              <dt>User agent:</dt>
-              <dd>Supported Javascript version depends on <strong>'user agent'</strong> that is 'web browser'(like: <em>Firefox</em>, <em>Chrome</em>, <em>Edge</em>, <em>Safari</em>)).<br>
+              <dt><s>User agent</s>User-agent Client Hints</dt>
+              <dd><s>Supported Javascript version depends on <strong>'user agent'</strong> that is 'web browser'(like: <em>Firefox</em>, <em>Chrome</em>, <em>Edge</em>, <em>Safari</em>)).<br>
                 Ever before, the precise appearance needed to be configured according to the browser rendering engine. Following code gets 'user agent'(web browser) as a string(text):<br>
-                <code>const userAgent = window.navigator.userAgent;</code>
+                </s>You can detect whether <i>user agent</i> is mobile device or not.<br>
+                <code><s>const userAgent = window.navigator.userAgent;</s><br>
+                const isMobileAgent = window.navigator.userAgentData.mobile;</code>
+
               </dd>
               <dt>User language:</dt>
               <dd>The language of browser user interface is useful to fit with it's proper webpage language.<br>
