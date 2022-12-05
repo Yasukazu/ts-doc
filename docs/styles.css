@@ -116,19 +116,19 @@ div.col-2 p, .col-2 dd {
   width: 100%;
   text-indent: 1em;
 }
+div[class|="col"] h2, h3 { 
+    margin: 0.5em 0; 
+    font-weight: bold;
+}
+
 div[class|="col"] h2 { 
-    border: thin dashed yellow;
     line-height: 1.4rem;
     font-size: 1.2rem;
-    font-weight: bold;
-    margin: 1em 0 0 0;
 }
 
 div[class|="col"] h3 { 
-    margin: 1em 0 0 0;
     line-height: 1.2rem;
     font-size: 1.0rem;
-    font-weight: bold;
 }
 
 .col-2 section {
