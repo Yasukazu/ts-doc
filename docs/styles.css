@@ -153,6 +153,16 @@ article > h3::before {
     font-size: 80%;
     vertical-align: super;
 }
-dt::after {
+dt {
+    font-weight: bold;
+    text-indent: 1em;
+  }
+  dt::after {
+    content: ":";
+  }
+  dd {
+    text-indent: 2em;
+  }
+  dd::before {
     content: "→";
-}
+  }
