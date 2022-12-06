@@ -35,13 +35,13 @@
           <article>
             <h3>Document interface:</h3>
             <dl>
-              <dt>Read from Document:</dt>
+              <dt>Read from Document</dt>
               <dd>Javascript can get a specific element in the document using CSS selector:<br>
                 <code class="language-javascript">
                   const win_nav_docObj = document.querySelector('#win-nav-doc');
                 </code>
               </dd>
-              <dt>Write into Document:</dt>
+              <dt>Write into Document</dt>
               <dd>Javascript can write into the document like this:<br>
                 <code class="lang-js">
                   win_nav_docObj.textContent = 'The Replaced text';
@@ -75,7 +75,7 @@
                 const isMobileAgent = window.navigator.userAgentData.mobile;</code>
 
               </dd>
-              <dt>User language:</dt>
+              <dt>User language</dt>
               <dd>The language of browser user interface is useful to fit with it's proper webpage language.<br>
                 <code>const userLanguage = window.navigator.language;</code>
               </dd>
@@ -90,9 +90,9 @@
             <p>DOM is a tree structure interface corresponds with HTML structure.<br>
               In a JavaScript code, the document model is available as the 'document' object.</p>
             <dl>
-              <dt>To get its property:</dt>
+              <dt>To get its property</dt>
               <dd><code>document.<em>prop</em></code></dd>
-              <dt>To call its function with parameters:</dt>
+              <dt>To call its function with parameters</dt>
               <dd><code>document.<em>func</em>(<em>param1</em>, <em>param2</em>)</code></dd>
             </dl>
           </article>
@@ -103,16 +103,14 @@
           <article>
             <h3>Create / Append / Move / Remove a node</h3>
             <dl>
-              <dt>
-                Create a new element node with a tag:
-              </dt>
+              <dt>Create a new element node with a tag</dt>
               <dd>(create a node object by create-element method call with a parameter(tag))Script:<br>
                 <code>let divElem = document.createElement('div');</code>
               </dd>
-              <dt>Modify the element:</dt>
+              <dt>Modify the element</dt>
               <dd>(JavaScript:) <code>divElem.className = "greeting";
                   divElem.innerHTML = "<strong>He-lo</strong>, What's going on here?";</code></dd>
-              <dt>Append the element into the document:</dt>
+              <dt>Append the element into the document</dt>
               <dd>(JavaScript:) <code>
                   document.body.append(divElem);
                 </code></dd>
@@ -125,11 +123,11 @@
           <article>
             <p>Assigns a function to an event handler(like <em>onclick</em>) of a with-event-handler element(like <em>input</em>) of the DOM object(that is <em>document</em>):</p>
             <dl>
-              <dt>(HTML):</dt>
+              <dt>(HTML)</dt>
               <dd>
                 <code>&lt;input id="btn_elem" type="button" value="Click me"&gt;</code>
               </dd>
-              <dt>(script):</dt>
+              <dt>(script)</dt>
               <dd><code>const btn_elem = document.querySelector("#btn-elem");<br>
                   const event_org_txt = event_divObj.textContent;<br>
                   let btn_counter = 0;<br>
@@ -151,10 +149,10 @@
             <h3>How to access with CSS</h3>
             <dl>
               <dt>How to get a CSS variable</dt>
-                <dd><p>Use getComputedStyle and getPropertyValue:</p>
+                <dd>Use <var>getComputedStyle(element).getPropertyValue</var><br>
                   <code>const <var>hdr_h</var> = getComputedStyle(document.documentElement).getPropertyValue('--hdr-h');</code></dd>
               <dt>Set a CSS variable</dt>
-                <dd>
+                <dd>Use<var>setProperty(name, value)</var><br>
                   <code>  document.querySelector('body').style.setProperty(nav_h_str, new_nav_h_str);</code>
                 </dd>
             </dl>
@@ -174,7 +172,7 @@
           </p>
           <div class="script-write">
             <dl>
-            <dt>Viewport width:</dt>
+            <dt>Viewport width</dt>
             <dd class="script-write" id="viewport-width"></dd>
             <dt>User agent: </dt>
             <dd class="script-write" id="user-agent"></dd> 
