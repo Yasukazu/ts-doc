@@ -1,30 +1,26 @@
 <!doctype html>
-
 <html lang="en">
-
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Document manipulation by Javascript</title>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div class="col-1">
       <header>
-        <a id="header-brand" href="#Document_Window_Navigator" title="JavaScript Document Model Application Program Interface"><abbr title="JavaScript">JS</abbr> <abbr title="Document Object Model">DOM</abbr> <abbr title="Application Program Interface">API</abbr></a>
-        <button type="button" id="nav-on-off" title="Click here to on / off Index">Index On / Off</button>
-      </header>
       <nav id="nav-bar" class="nav-bar">
-        <a href="#Document_Window_Navigator" class="nav-link">Document Window Navigator</a>
-        <a href="#Document_Object_Model" class="nav-link">Document Object Model</a>
-        <a href="#Basic_DOM_operation" class="nav-link">Basic DOM operation</a>
-        <a href="#Event_customization" class="nav-link">Event customization</a>
-        <a href="#Style_Sheet_Access" class="nav-link">Style Sheet Access</a>
+        <details>
+          <summary id="nav-summ">Index</summary>
+          <a href="#Document_Window_Navigator" class="nav-link">Document Window Navigator</a>
+          <a href="#Document_Object_Model" class="nav-link">Document Object Model</a>
+          <a href="#Basic_DOM_operation" class="nav-link">Basic DOM operation</a>
+          <a href="#Event_customization" class="nav-link">Event customization</a>
+          <a href="#Style_Sheet_Access" class="nav-link">Style Sheet Access</a>
+        </details>
       </nav>
+        <a id="header-brand" href="#" title="JavaScript Document Model Application Program Interface"><abbr title="JavaScript">JS</abbr> <abbr title="Document Object Model">DOM</abbr> <abbr title="Application Program Interface">API</abbr></a>
+      </header>
     </div>
 
     <div class="col-2">
@@ -188,5 +184,4 @@
   <script type="text/Javascript" src="./event-example.js"></script>
   <script type="text/Javascript" src="./nav-button.js"></script>
 </body>
-
 </html>
