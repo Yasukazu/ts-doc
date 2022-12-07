@@ -1,29 +1,21 @@
-const nav_on_off_button = document.querySelector("#nav-on-off");
-const nav_bar = document.querySelector("#nav-bar");
-let is_pc_media = false;
 
-const col_2 = document.querySelector("div.col-2");
-const nav_w = getComputedStyle(document.documentElement).getPropertyValue('--nav-w');
 
-index_is_on = true;
+const nav_details = document.querySelector("nav > details");
 
-const navlinks = document.querySelectorAll("a.nav-link");
-navlinks.forEach((a) => a.onclick = close_nav_a_clicked);
+const nav_anchor = document.querySelectorAll("a.nav-link");
+nav_anchor.forEach((a) => a.onclick = close_nav_a_clicked);
 
 function close_nav_a_clicked() {
-    nav_bar.style.display = 'none';
+    nav_details.removeAttribute('open');
 }
 
-nav_on_off_button.onclick = () => {
-  if (nav_bar.style.display == 'block') {
-    nav_bar.style.display = 'none';
-  } else {
-    nav_bar.style.display = 'block';
-  }
-}
-
+/*
+const col_2 = document.querySelector("div.col-2");
+const nav_w = getComputedStyle(document.documentElement).getPropertyValue('--nav-w');
 const pc_media_query = window.matchMedia("(min-width: 540px)");
 
+const nav_bar = document.querySelector("#nav-bar");
+let is_pc_media = false;
 function mediaChangeCheck(pc_media_query) {
   if (pc_media_query.matches) {
     is_pc_media = true;
@@ -40,3 +32,4 @@ if ('addEventListener' in pc_media_query) {
 }
 
 mediaChangeCheck(pc_media_query);
+*/
