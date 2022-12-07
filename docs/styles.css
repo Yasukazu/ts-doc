@@ -45,8 +45,10 @@ div.col-1 > header {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     height: var(--hdr-h);
     line-height: 1rem;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.1);
     display: flex;
     justify-content: space-between;
 }
@@ -55,19 +57,23 @@ div.col-1 > header {
     color: lightgray;
 }
 
-div.col-1 > header > button {
-    background-color: green;
-    color :white;
-    line-height: 80%;
-}
-
-#nav-bar {
+nav#nav-bar {
+    /*
     z-index: 7;
     position: fixed;
     top: var(--hdr-h);
-    left: 0;
+    left: 0; */
     background-color: rgba(0,0,0,0);
     padding: 0 1em;
+}
+
+nav > details {
+    border: thin solid yellow;
+    border-radius: 0.3em;
+}
+nav > details > summary {
+    color: white;
+    margin: 0 1em;
 }
 
 #nav-bar a {
@@ -165,4 +171,17 @@ dt {
   }
   dd::before {
     content: "→";
+  }
+  article code {
+    display: block;
+    margin-left: 0;
+    width: 100%;
+    display: inline-block;
+    background-color: black;
+    color: yellow;
+    padding: 0 1em 0 1em;
+    line-height: 1.1em;
+    font-size: 90%;
+    font-family: Consolas, 'Courier New', Courier, Monaco, monospace, serif;
+    overflow:scroll;
   }
