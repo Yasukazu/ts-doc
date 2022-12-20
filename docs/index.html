@@ -24,10 +24,18 @@
       <article>
         <h3>Document interface:</h3>
         <dl>
-          <dt>Read from Document</dt>
-          <dd>Javascript can get a specific element in the document using CSS selector:<br><code class="language-javascript">const win_nav_docObj = document.querySelector(&apos;#win-nav-doc&apos;);</code></dd>
-          <dt>Write into Document</dt>
-          <dd>Javascript can write into the document like this:<br><code class="lang-js">win_nav_docObj.textContent = &apos;The Replaced text&apos;;</code></dd>
+          <dt>Get an element of a document
+            <s>Read from Document</s>
+          </dt>
+          <dd>Javascript can get a specific element in the document using query selector function:<br><code class="language-javascript">const 
+              <var>win_nav_doc</var>= document.querySelector(&apos;#
+              <var>win-nav-doc</var>&apos;);</code></dd>
+          <dt>Set a certain property of a document
+            <s>Write into Document</s>
+          </dt>
+          <dd>Javascript can set a certain property of the document like this:<br><code class="lang-js">
+              <var>win_nav_doc</var>.textContent = &apos;
+              <var>The Replaced text</var>&apos;;</code></dd>
         </dl>
         <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">HTMLElement</a> in MDN web docs</aside>
       </article>
@@ -112,20 +120,25 @@
           <dt>How to get a CSS variable</dt>
           <dd>Use 
             <var>getComputedStyle(element).getPropertyValue</var><br><code>const 
-              <var>hdr_h</var> = getComputedStyle(document.documentElement).getPropertyValue(&apos;--hdr-h&apos;);</code>
+              <var>hdr_h</var> = getComputedStyle(document.
+              <var>documentElement</var>).getPropertyValue(&apos;--hdr-h&apos;);</code>
           </dd>
           <dt>Set a CSS variable</dt>
           <dd>Use
             <var>setProperty(name, value)</var><br><code>  document.querySelector(
               <var>&apos;body&apos;</var>).style.setProperty(
-              <var>nav_h_str</var>, 
+              <var>'--hdr-h'</var>, 
               <var>new_nav_h_str</var>);</code>
           </dd>
         </dl>
       </article>
       <article>
-        <h3>Recommended JavaScript coding:</h3>
-        <p>Use <strong>querySelector</strong> to specify a node/element in the document. One benefit is: the same way of CSS attirbute selector <em>the first half before hypen</em>(like: <code> <em>attribute-name</em>[|= <em>attribute-value</em>]</code>) of CSS naming convention as &quot;hypen-connected&quot;.</p>
+        <h3>HTML Custom data attirbute for data grouping</h3>
+        <p>Use <strong>querySelector</strong> to specify a node/element in the document. One benefit is: the same way of CSS attirbute selector <em>the first half before hypen</em>(like: <code> <em>element-name</em>[class |= <em>"n"</em>]</code>) of CSS naming convention as &quot;hypen-connected&quot;.</p>
+        <aside>
+          Although there is another good way to group / classify HTML elements; it&apos;s
+          = "HTML Custom data attirbute".
+        </aside>
       </article>
     </section>
     <footer>
