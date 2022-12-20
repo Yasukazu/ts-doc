@@ -35,18 +35,27 @@ head
       article
         h3 Document interface:
         dl
-          dt Read from Document
+          dt Get an element of a document
+            s Read from Document
           dd
-            | Javascript can get a specific element in the document using CSS selector:
+            | Javascript can get a specific element in the document using query selector function:
             br
             code.language-javascript
-              | const win_nav_docObj = document.querySelector(&apos;#win-nav-doc&apos;);
-          dt Write into Document
+              | const 
+              var win_nav_doc
+              | = document.querySelector(&apos;#
+              var win-nav-doc
+              |&apos;);
+          dt Set a certain property of a document
+            s Write into Document
           dd
-            | Javascript can write into the document like this:
+            | Javascript can set a certain property of the document like this:
             br
             code.lang-js
-              | win_nav_docObj.textContent = &apos;The Replaced text&apos;;
+              var win_nav_doc
+              |.textContent = &apos;
+              var The Replaced text
+              |&apos;;
         aside
           | Such Document APIs are like these(
           a(href='https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement') HTMLElement
@@ -217,7 +226,9 @@ head
             code
               | const 
               var hdr_h
-              |  = getComputedStyle(document.documentElement).getPropertyValue(&apos;--hdr-h&apos;);
+              |  = getComputedStyle(document.
+              var documentElement
+              |).getPropertyValue(&apos;--hdr-h&apos;);
           dt Set a CSS variable
           dd
             | Use
@@ -226,12 +237,12 @@ head
             code   document.querySelector(
               var &apos;body&apos;
               |).style.setProperty(
-              var nav_h_str
+              var '--hdr-h'
               |, 
               var new_nav_h_str
               |);
       article
-        h3 Recommended JavaScript coding:
+        h3 HTML Custom data attirbute for data grouping
         p
           |Use 
           strong querySelector
@@ -239,11 +250,12 @@ head
           em the first half before hypen
           | (like: 
           code 
-            em attribute-name
-            |[|= 
-            em attribute-value
+            em element-name
+            |[class |= 
+            em "n"
             | ]
           |) of CSS naming convention as &quot;hypen-connected&quot;.
+        aside=Although there is another good way to group / classify HTML elements; it&apos;s "HTML Custom data attirbute".
     footer
       p
         | This webpage is cited from:
@@ -261,7 +273,7 @@ head
           dd#user-agent.script-write
           dt User language: 
           dd#user-language.script-write
-          dt CSS variable &quot;--nav-h&quot;
+          dt="CSS variable '--nav-h'"
           dd#nav-h.script-write
 script(type='text/Javascript' src='./event-example.js')
 script(type='text/Javascript' src='./nav-button.js')
