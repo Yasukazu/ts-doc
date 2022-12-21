@@ -113,32 +113,36 @@
       </article>
     </section>
     <section class="main-section" id="Style_Sheet_Access">
-      <h2>Style Sheet Access</h2>
+      <h2>Style (Sheet) Access</h2>
       <article>
-        <h3>How to access with CSS</h3>
-        <dl>
-          <dt>How to get a CSS variable</dt>
-          <dd>Use 
-            <var>getComputedStyle(element).getPropertyValue</var><br><code>const 
-              <var>hdr_h</var> = getComputedStyle(document.
-              <var>documentElement</var>).getPropertyValue(&apos;--hdr-h&apos;);</code>
-          </dd>
-          <dt>Set a CSS variable</dt>
-          <dd>Use
-            <var>setProperty(name, value)</var><br><code>  document.querySelector(
-              <var>&apos;body&apos;</var>).style.setProperty(
-              <var>'--hdr-h'</var>, 
-              <var>new_nav_h_str</var>);</code>
-          </dd>
-        </dl>
+        <h3>How to access with CSS variables
+          <details title="Click to expand">
+            <summary> 
+              <dl>function:
+                <dt>to get</dt>
+                <dd>getComputedStyle(node).getPropertyValue($name) </dd>
+                <dt>to set</dt>
+                <dd>node.style.setProperty($name, value)</dd>
+              </dl>
+            </summary>
+            <dl>code:
+              <dt>How to get a CSS variable</dt>
+              <dd><code>const<var>hdr_h</var>= getComputedStyle(<var>node</var>).getPropertyValue(<var>'--hdr-h'</var>);</code></dd>
+              <dt>Set a CSS variable</dt>
+              <dd>Use
+                <var>setProperty(name, value)</var><br><code>  document.querySelector(
+                  <var>&apos;body&apos;</var>).style.setProperty(
+                  <var>'--hdr-h'</var>, 
+                  <var>new_nav_h_str</var>);</code>
+              </dd>
+            </dl>
+          </details>
+        </h3>
       </article>
       <article>
         <h3>HTML Custom data attirbute for data grouping</h3>
         <p>Use <strong>querySelector</strong> to specify a node/element in the document. One benefit is: the same way of CSS attirbute selector <em>the first half before hypen</em>(like: <code> <em>element-name</em>[class |= <em>"n"</em>]</code>) of CSS naming convention as &quot;hypen-connected&quot;.</p>
-        <aside>
-          Although there is another good way to group / classify HTML elements; it&apos;s
-          = "HTML Custom data attirbute".
-        </aside>
+        <aside> Although there is another good way to group / classify HTML elements; it's<em>HTML Custom data attirbute.</em></aside>
       </article>
     </section>
     <footer>
@@ -156,7 +160,7 @@
           <dd class="script-write" id="user-agent"></dd>
           <dt>User language: </dt>
           <dd class="script-write" id="user-language"></dd>
-          <dt>CSS variable &quot;--nav-h&quot;</dt>
+          <dt>CSS variable '--nav-h'</dt>
           <dd class="script-write" id="nav-h"></dd>
         </dl>
       </div>

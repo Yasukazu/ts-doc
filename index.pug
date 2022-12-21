@@ -214,33 +214,32 @@ head
           input#btn-elem(type='button' value='Click me')
           |               &larr; If you click this button, then above area text becomes added [ + click-count].
     section#Style_Sheet_Access.main-section
-      h2 Style Sheet Access
+      h2 Style (Sheet) Access
       article
-        h3 How to access with CSS
-        dl
-          dt How to get a CSS variable
-          dd
-            | Use 
-            var getComputedStyle(element).getPropertyValue
-            br
-            code
-              | const 
-              var hdr_h
-              |  = getComputedStyle(document.
-              var documentElement
-              |).getPropertyValue(&apos;--hdr-h&apos;);
-          dt Set a CSS variable
-          dd
-            | Use
-            var setProperty(name, value)
-            br
-            code   document.querySelector(
-              var &apos;body&apos;
-              |).style.setProperty(
-              var '--hdr-h'
-              |, 
-              var new_nav_h_str
-              |);
+        h3 How to access with CSS variables
+          details(title='Click to expand')
+            summary 
+              dl function:
+                dt to get
+                dd getComputedStyle(node).getPropertyValue($name) 
+                dt to set
+                dd node.style.setProperty($name, value)
+            dl code:
+              dt How to get a CSS variable
+              dd
+                code const<var>hdr_h</var>= getComputedStyle(<var>node</var>).getPropertyValue(<var>'--hdr-h'</var>);
+              dt Set a CSS variable
+              dd
+                | Use
+                var setProperty(name, value)
+                br
+                code   document.querySelector(
+                  var &apos;body&apos;
+                  |).style.setProperty(
+                  var '--hdr-h'
+                  |, 
+                  var new_nav_h_str
+                  |);
       article
         h3 HTML Custom data attirbute for data grouping
         p
@@ -255,7 +254,9 @@ head
             em "n"
             | ]
           |) of CSS naming convention as &quot;hypen-connected&quot;.
-        aside=Although there is another good way to group / classify HTML elements; it&apos;s "HTML Custom data attirbute".
+        - const asideText = "Although there is another good way to group / classify HTML elements; it's"
+        aside  #{asideText}
+          em HTML Custom data attirbute.
     footer
       p
         | This webpage is cited from:
