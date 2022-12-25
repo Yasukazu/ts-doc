@@ -21,24 +21,30 @@
       <main id="main-doc">
         <section class="main-section" id="Document_Window_Navigator">
           <h2>Document / Window / Navigator</h2>
-          <p>Javascript can read and write HTML<strong>Document</strong>. And also get information about the<strong>Window</strong>rendered by the web browser. And also information about the 
-            <u>web browser itself</u>(<strong>Navigator</strong>).
-          </p>
+          <p>Javascript can read and write: </p>
+          <ol>
+            <li><strong>Document</strong>: HTML itself</li>
+            <li><strong>Window</strong>: output area from Document</li>
+            <li><strong>Navigator</strong>: HTML interpreter (web browser, text reader or printer)</li>
+          </ol>
           <article>
             <h3>Document interface:</h3>
             <dl>
-              <dt>Get an element of a document
-                <s>Read from Document</s>
-              </dt>
-              <dd>Javascript can get a specific element in the document using query selector function:<br><code class="language-javascript">const 
-                  <var>win_nav_doc</var>= document.querySelector(&apos;#
-                  <var>win-nav-doc</var>&apos;);</code></dd>
-              <dt>Set a certain property of a document
-                <s>Write into Document</s>
-              </dt>
-              <dd>Javascript can set a certain property of the document like this:<br><code class="lang-js">
-                  <var>win_nav_doc</var>.textContent = &apos;
-                  <var>The Replaced text</var>&apos;;</code></dd>
+              <div>
+                <dt>Get an element of a document
+                  <s>Read from Document</s>
+                </dt>
+                <dd>Javascript can get a specific element in the document using query selector function:<br><code class="language-javascript">const 
+                    <var>win_nav_doc</var>= document.querySelector(&apos;#<var>win-nav-doc</var>&apos;);</code></dd>
+              </div>
+              <div>
+                <dt>Set a certain property of a document
+                  <s>Write into Document</s>
+                </dt>
+                <dd>Javascript can set a certain property of the document like this:<br><code class="lang-js">
+                    <var>win_nav_doc</var>.textContent = &apos;
+                    <var>The Replaced text</var>&apos;;</code></dd>
+              </div>
             </dl>
             <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">HTMLElement</a> in MDN web docs</aside>
           </article>
