@@ -1,12 +1,15 @@
 @charset "UTF-8";
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 *:before {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 *:after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 :root {
@@ -33,8 +36,6 @@ html {
 }
 html body {
   padding: inherit;
-  -webkit-text-size-adjust: auto;
-  text-size-adjust: auto;
 }
 html body div.col-1 {
   width: 100%;
@@ -45,16 +46,21 @@ html body div.col-1 * {
   width: auto;
 }
 html body div.col-1 > header {
-  background-color: #64646e;
+  background-color: rgb(100, 100, 110);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: var(--hdr-h);
   line-height: 1rem;
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 html body div.col-1 > header a#header-brand {
   color: lightgray;
@@ -114,11 +120,11 @@ html body div.col-2 dd {
 }
 html body div.col-2 section {
   border-top: medium solid black;
-  background-color: #c8c8c8;
+  background-color: rgb(200, 200, 200);
 }
 html body div.col-2 article {
   border-top: thin solid darkgray;
-  background-color: #c8c8c8;
+  background-color: rgb(200, 200, 200);
 }
 html body div[class|=col] {
   width: 100%;
