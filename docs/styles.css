@@ -167,7 +167,8 @@ html body dd::before {
   content: "→";
 }
 html body details:before {
-  content: "(Click following triangle to show/hide details):";
+  content: "(Click triangle below to show/hide details):";
   font-variant: small-caps;
   font-size: smaller;
+  color: yellow;
 }
