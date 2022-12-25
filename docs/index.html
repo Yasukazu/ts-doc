@@ -1,172 +1,176 @@
 <!DOCTYPE html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=2.0">
-  <link rel="stylesheet" href="./reset.css">
-  <title>HTML Document manipulation by Javascript for self training</title>
-  <link rel="stylesheet" href="./styles.css">
-</head>
-<div class="col-1">
-  <header>
-    <nav class="nav-bar" id="nav-bar">
-      <details>
-        <summary id="nav-summ">Index</summary><a class="nav-link" href="#Document_Window_Navigator">Document Window Navigator</a><a class="nav-link" href="#Document_Object_Model">Document Object Model</a><a class="nav-link" href="#Basic_DOM_operation">Basic DOM operation</a><a class="nav-link" href="#Event_customization">Event customization</a><a class="nav-link" href="#Style_Sheet_Access">Style Sheet Access</a>
-      </details>
-    </nav><a id="header-brand" href="#" title="JavaScript Document Model Application Program Interface"><abbr title="JavaScript">JS</abbr><abbr title="Document Object Model">DOM</abbr><abbr title="Application Program Interface">API</abbr></a>
-  </header>
-</div>
-<div class="col-2">
-  <main id="main-doc">
-    <section class="main-section" id="Document_Window_Navigator">
-      <h2>Document / Window / Navigator</h2>
-      <p>Javascript can read and write HTML<strong>Document</strong>. And also get information about the<strong>Window</strong>rendered by the web browser. And also information about the 
-        <u>web browser itself</u>(<strong>Navigator</strong>).
-      </p>
-      <article>
-        <h3>Document interface:</h3>
-        <dl>
-          <dt>Get an element of a document
-            <s>Read from Document</s>
-          </dt>
-          <dd>Javascript can get a specific element in the document using query selector function:<br><code class="language-javascript">const 
-              <var>win_nav_doc</var>= document.querySelector(&apos;#
-              <var>win-nav-doc</var>&apos;);</code></dd>
-          <dt>Set a certain property of a document
-            <s>Write into Document</s>
-          </dt>
-          <dd>Javascript can set a certain property of the document like this:<br><code class="lang-js">
-              <var>win_nav_doc</var>.textContent = &apos;
-              <var>The Replaced text</var>&apos;;</code></dd>
-        </dl>
-        <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">HTMLElement</a> in MDN web docs</aside>
-      </article>
-      <article>
-        <h3>Window interface:</h3>
-        <dl>
-          <dt>Read viewport width</dt>
-          <dd>To get the width into a variable &apos;viewportWidth&apos; as int:<br><code>let viewportWidth = window.innerWidth;</code></dd>
-          <dt>Read viewport height</dt>
-          <dd>To get the height into a variable &apos;viewportHeight&apos; as int:<br><code>let viewportHeight = window.innerHeight;</code></dd>
-        </dl>
-        <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window</a> interface in MDN web docs)</aside>
-      </article>
-      <article>
-        <h3>Navigator interface:</h3>
-        <dl>
-          <dt>
-            <s>User agent</s>User-agent Client Hints
-          </dt>
-          <dd>
-            <s>Supported Javascript version depends on <strong>&apos;user agent&apos;</strong> that is &apos;web browser&apos;(like: <em>Firefox</em>, <em>Chrome</em>, <em>Edge</em>, <em>Safari</em>)).<br>                Ever before, the precise appearance needed to be configured according to the browser rendering engine. Following code gets &apos;user agent&apos;(web browser) as a string(text):<br></s>You can detect whether <i>user agent</i> is mobile device or not.<br><code>
-              <s>const userAgent = window.navigator.userAgent;</s><br>                const isMobileAgent = window.navigator.userAgentData.mobile;</code>
-          </dd>
-          <dt>User language</dt>
-          <dd>The language of browser user interface is useful to fit with it&apos;s proper webpage language.<br><code>const userLanguage = window.navigator.language;</code></dd>
-        </dl>
-        <aside>Language tag before hyphen is like: <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>(<em>Wikipedia</em>)</aside>
-      </article>
-    </section>
-    <section class="main-section" id="Document_Object_Model">
-      <h2>Document Object Model</h2>
-      <p>In Javascript, &apos;Document Object Model&apos; is represented as Document type interface. It is called as &apos;DOM&apos;.</p>
-      <article>
-        <p>DOM is a tree structure interface corresponds with HTML structure.<br>              In a JavaScript code, the document model is available as the &apos;document&apos; object.</p>
-        <dl>
-          <dt>To get its property</dt>
-          <dd><code>document.<em>prop</em></code></dd>
-          <dt>To call its function with parameters</dt>
-          <dd><code>document.<em>func</em>(<em>param1</em>, <em>param2</em>)</code></dd>
-        </dl>
-      </article>
-    </section>
-    <section class="main-section" id="Basic_DOM_operation">
-      <h2>Basic DOM operation</h2>
-      <p>How to operate an HTML document</p>
-      <article>
-        <h3>Create / Append / Move / Remove a node</h3>
-        <dl>
-          <dt>Create a new element node with a tag</dt>
-          <dd>(create a node object by create-element method call with a parameter(tag))Script:<br><code>let divElem = document.createElement(&apos;div&apos;);</code></dd>
-          <dt>Modify the element</dt>
-          <dd>(JavaScript:) <code>
-              divElem.className = &quot;greeting&quot;;
-              divElem.innerHTML = &quot;<strong>He-lo</strong>, What&apos;s going on here?&quot;;</code></dd>
-          <dt>Append the element into the document</dt>
-          <dd>(JavaScript:) <code>document.body.append(divElem);</code></dd>
-        </dl>
-        <aside>Append the element node to other location cause &apos;move&apos;, resulting old position one is automatically removed. If neeed to duplicate the element node, use <strong>cloneNode(<em>bool</em>)</strong> method. If the <strong><em>bool</em></strong> is true then deep copy else no child copy. In case to remove the element node, use <strong>remove()</strong> method of the node itself.</aside>
-      </article>
-    </section>
-    <section class="main-section" id="Event_customization">
-      <h2>Event customization</h2>
-      <article>
-        <p>Assigns a function to an event handler(like <em>onclick</em>) of a with-event-handler element(like <em>input</em>) of the DOM object(that is <em>document</em>):</p>
-        <dl>
-          <dt>(HTML)</dt>
-          <dd><code>&lt;input id=&quot;btn_elem&quot; type=&quot;button&quot; value=&quot;Click me&quot;&gt;</code></dd>
-          <dt>(script)</dt>
-          <dd><code>const btn_elem = document.querySelector(&quot;#btn-elem&quot;);<br>                  const event_org_txt = event_divObj.textContent;<br>                  let btn_counter = 0;<br>                  btn_elem.onclick = function() {<span>btn_counter += 1;<br>                    event_divObj.textContent = &grave;${event_org_txt} + ${btn_counter}&grave;;</span>                  }</code></dd>
-        </dl>
-        <div id="event-div">Event</div>
-        <label>
-          <input id="btn-elem" type="button" value="Click me">              &larr; If you click this button, then above area text becomes added [ + click-count].
-        </label>
-      </article>
-    </section>
-    <section class="main-section" id="Style_Sheet_Access">
-      <h2>Style (Sheet) Access</h2>
-      <article>
-        <h3>How to access with CSS variables
-          <details title="Click to expand">
-            <summary> 
-              <dl>function:
-                <dt>to get</dt>
-                <dd>getComputedStyle(node).getPropertyValue($name) </dd>
-                <dt>to set</dt>
-                <dd>node.style.setProperty($name, value)</dd>
-              </dl>
-            </summary>
-            <dl>code:
-              <dt>How to get a CSS variable</dt>
-              <dd><code>const<var>hdr_h</var>= getComputedStyle(<var>node</var>).getPropertyValue(<var>'--hdr-h'</var>);</code></dd>
-              <dt>Set a CSS variable</dt>
-              <dd>Use
-                <var>setProperty(name, value)</var><br><code>  document.querySelector(
-                  <var>&apos;body&apos;</var>).style.setProperty(
-                  <var>'--hdr-h'</var>, 
-                  <var>new_nav_h_str</var>);</code>
-              </dd>
-            </dl>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Document manipulation by Javascript for self training</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="col-1">
+      <header>
+        <nav class="nav-bar" id="nav-bar">
+          <details>
+            <summary id="nav-summ">Index</summary><a class="nav-link" href="#Document_Window_Navigator">Document Window Navigator</a><a class="nav-link" href="#Document_Object_Model">Document Object Model</a><a class="nav-link" href="#Basic_DOM_operation">Basic DOM operation</a><a class="nav-link" href="#Event_customization">Event customization</a><a class="nav-link" href="#Style_Sheet_Access">Style Sheet Access</a>
           </details>
-        </h3>
-      </article>
-      <article>
-        <h3>HTML Custom data attirbute for data grouping</h3>
-        <p>Use <strong>querySelector</strong> to specify a node/element in the document. One benefit is: the same way of CSS attirbute selector <em>the first half before hypen</em>(like: <code> <em>element-name</em>[class |= <em>"n"</em>]</code>) of CSS naming convention as &quot;hypen-connected&quot;.</p>
-        <aside> Although there is another good way to group / classify HTML elements; it's<em>HTML Custom data attirbute.</em></aside>
-      </article>
-    </section>
-    <footer>
-      <p>This webpage is cited from:
-        <cite><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">MDN|Learn/JavaScript/Client-side web APIs/Manipulating documents</a></cite>
-      </p>
-      <p>Also from:
-        <cite><a href="https://javascript.info/document">JAVASCRIPT.INFO|Document|.. learn to manipulate a web-page using Javascript.</a></cite>
-      </p>
-      <div class="script-write">
-        <dl>
-          <dt>Viewport width</dt>
-          <dd class="script-write" id="viewport-width"></dd>
-          <dt>User agent: </dt>
-          <dd class="script-write" id="user-agent"></dd>
-          <dt>User language: </dt>
-          <dd class="script-write" id="user-language"></dd>
-          <dt>CSS variable '--nav-h'</dt>
-          <dd class="script-write" id="nav-h"></dd>
-        </dl>
-      </div>
-    </footer>
-  </main>
-</div>
-<script type="text/Javascript" src="./event-example.js"></script>
-<script type="text/Javascript" src="./nav-button.js"></script>
+        </nav><a id="header-brand" href="#" title="JavaScript Document Model Application Program Interface"><abbr title="JavaScript">JS</abbr><abbr title="Document Object Model">DOM</abbr><abbr title="Application Program Interface">API</abbr></a>
+      </header>
+    </div>
+    <div class="col-2">
+      <main id="main-doc">
+        <section class="main-section" id="Document_Window_Navigator">
+          <h2>Document / Window / Navigator</h2>
+          <p>Javascript can read and write HTML<strong>Document</strong>. And also get information about the<strong>Window</strong>rendered by the web browser. And also information about the 
+            <u>web browser itself</u>(<strong>Navigator</strong>).
+          </p>
+          <article>
+            <h3>Document interface:</h3>
+            <dl>
+              <dt>Get an element of a document
+                <s>Read from Document</s>
+              </dt>
+              <dd>Javascript can get a specific element in the document using query selector function:<br><code class="language-javascript">const 
+                  <var>win_nav_doc</var>= document.querySelector(&apos;#
+                  <var>win-nav-doc</var>&apos;);</code></dd>
+              <dt>Set a certain property of a document
+                <s>Write into Document</s>
+              </dt>
+              <dd>Javascript can set a certain property of the document like this:<br><code class="lang-js">
+                  <var>win_nav_doc</var>.textContent = &apos;
+                  <var>The Replaced text</var>&apos;;</code></dd>
+            </dl>
+            <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">HTMLElement</a> in MDN web docs</aside>
+          </article>
+          <article>
+            <h3>Window interface:</h3>
+            <dl>
+              <dt>Read viewport width</dt>
+              <dd>To get the width into a variable &apos;viewportWidth&apos; as int:<br><code>let viewportWidth = window.innerWidth;</code></dd>
+              <dt>Read viewport height</dt>
+              <dd>To get the height into a variable &apos;viewportHeight&apos; as int:<br><code>let viewportHeight = window.innerHeight;</code></dd>
+            </dl>
+            <aside>Such Document APIs are like these(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window</a> interface in MDN web docs)</aside>
+          </article>
+          <article>
+            <h3>Navigator interface:</h3>
+            <dl>
+              <dt>
+                <s>User agent</s>User-agent Client Hints
+              </dt>
+              <dd>
+                <s>Supported Javascript version depends on <strong>&apos;user agent&apos;</strong> that is &apos;web browser&apos;(like: <em>Firefox</em>, <em>Chrome</em>, <em>Edge</em>, <em>Safari</em>)).<br>                Ever before, the precise appearance needed to be configured according to the browser rendering engine. Following code gets &apos;user agent&apos;(web browser) as a string(text):<br></s>You can detect whether <i>user agent</i> is mobile device or not.<br><code>
+                  <s>const userAgent = window.navigator.userAgent;</s><br>                const isMobileAgent = window.navigator.userAgentData.mobile;</code>
+              </dd>
+              <dt>User language</dt>
+              <dd>The language of browser user interface is useful to fit with it&apos;s proper webpage language.<br><code>const userLanguage = window.navigator.language;</code></dd>
+            </dl>
+            <aside>Language tag before hyphen is like: <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>(<em>Wikipedia</em>)</aside>
+          </article>
+        </section>
+        <section class="main-section" id="Document_Object_Model">
+          <h2>Document Object Model</h2>
+          <p>In Javascript, &apos;Document Object Model&apos; is represented as Document type interface. It is called as &apos;DOM&apos;.</p>
+          <article>
+            <p>DOM is a tree structure interface corresponds with HTML structure.<br>              In a JavaScript code, the document model is available as the &apos;document&apos; object.</p>
+            <dl>
+              <dt>To get its property</dt>
+              <dd><code>document.<em>prop</em></code></dd>
+              <dt>To call its function with parameters</dt>
+              <dd><code>document.<em>func</em>(<em>param1</em>, <em>param2</em>)</code></dd>
+            </dl>
+          </article>
+        </section>
+        <section class="main-section" id="Basic_DOM_operation">
+          <h2>Basic DOM operation</h2>
+          <p>How to operate an HTML document</p>
+          <article>
+            <h3>Create / Append / Move / Remove a node</h3>
+            <dl>
+              <dt>Create a new element node with a tag</dt>
+              <dd>(create a node object by create-element method call with a parameter(tag))Script:<br><code>let divElem = document.createElement(&apos;div&apos;);</code></dd>
+              <dt>Modify the element</dt>
+              <dd>(JavaScript:) <code>
+                  divElem.className = &quot;greeting&quot;;
+                  divElem.innerHTML = &quot;<strong>He-lo</strong>, What&apos;s going on here?&quot;;</code></dd>
+              <dt>Append the element into the document</dt>
+              <dd>(JavaScript:) <code>document.body.append(divElem);</code></dd>
+            </dl>
+            <aside>Append the element node to other location cause &apos;move&apos;, resulting old position one is automatically removed. If neeed to duplicate the element node, use <strong>cloneNode(<em>bool</em>)</strong> method. If the <strong><em>bool</em></strong> is true then deep copy else no child copy. In case to remove the element node, use <strong>remove()</strong> method of the node itself.</aside>
+          </article>
+        </section>
+        <section class="main-section" id="Event_customization">
+          <h2>Event customization</h2>
+          <article>
+            <p>Assigns a function to an event handler(like <em>onclick</em>) of a with-event-handler element(like <em>input</em>) of the DOM object(that is <em>document</em>):</p>
+            <dl>
+              <dt>(HTML)</dt>
+              <dd><code>&lt;input id=&quot;btn_elem&quot; type=&quot;button&quot; value=&quot;Click me&quot;&gt;</code></dd>
+              <dt>(script)</dt>
+              <dd><code>const btn_elem = document.querySelector(&quot;#btn-elem&quot;);<br>                  const event_org_txt = event_divObj.textContent;<br>                  let btn_counter = 0;<br>                  btn_elem.onclick = function() {<span>btn_counter += 1;<br>                    event_divObj.textContent = &grave;${event_org_txt} + ${btn_counter}&grave;;</span>                  }</code></dd>
+            </dl>
+            <div id="event-div">Event</div>
+            <label>
+              <input id="btn-elem" type="button" value="Click me">              &larr; If you click this button, then above area text becomes added [ + click-count].
+            </label>
+          </article>
+        </section>
+        <section class="main-section" id="Style_Sheet_Access">
+          <h2>Style (Sheet) Access</h2>
+          <article>
+            <h3>How to access with CSS variables
+              <details title="Click to expand">
+                <summary> 
+                  <dl>function:
+                    <dt>to get</dt>
+                    <dd>getComputedStyle(node).getPropertyValue($name) </dd>
+                    <dt>to set</dt>
+                    <dd>node.style.setProperty($name, value)</dd>
+                  </dl>
+                </summary>
+                <dl>code:
+                  <dt>How to get a CSS variable</dt>
+                  <dd><code>const<var>hdr_h</var>= getComputedStyle(<var>node</var>).getPropertyValue(<var>'--hdr-h'</var>);</code></dd>
+                  <dt>Set a CSS variable</dt>
+                  <dd>Use
+                    <var>setProperty(name, value)</var><br><code>  document.querySelector(
+                      <var>&apos;body&apos;</var>).style.setProperty(
+                      <var>'--hdr-h'</var>, 
+                      <var>new_nav_h_str</var>);</code>
+                  </dd>
+                </dl>
+              </details>
+            </h3>
+          </article>
+          <article>
+            <h3>HTML Custom data attirbute for data grouping</h3>
+            <p>Use <strong>querySelector</strong> to specify a node/element in the document. One benefit is: the same way of CSS attirbute selector <em>the first half before hypen</em>(like: <code> <em>element-name</em>[class |= <em>"n"</em>]</code>) of CSS naming convention as &quot;hypen-connected&quot;.</p>
+            <aside> Although there is another good way to group / classify HTML elements; it's<em>HTML Custom data attirbute.</em></aside>
+          </article>
+        </section>
+        <footer>
+          <p>This webpage is cited from:
+            <cite><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">MDN|Learn/JavaScript/Client-side web APIs/Manipulating documents</a></cite>
+          </p>
+          <p>Also from:
+            <cite><a href="https://javascript.info/document">JAVASCRIPT.INFO|Document|.. learn to manipulate a web-page using Javascript.</a></cite>
+          </p>
+          <div class="script-write">
+            <dl>
+              <dt>Viewport width</dt>
+              <dd class="script-write" id="viewport-width"></dd>
+              <dt>User agent: </dt>
+              <dd class="script-write" id="user-agent"></dd>
+              <dt>User language: </dt>
+              <dd class="script-write" id="user-language"></dd>
+              <dt>CSS variable '--nav-h'</dt>
+              <dd class="script-write" id="nav-h"></dd>
+            </dl>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script type="text/Javascript" src="./event-example.js"></script>
+    <script type="text/Javascript" src="./nav-button.js"></script>
+  </body>
+</html>
