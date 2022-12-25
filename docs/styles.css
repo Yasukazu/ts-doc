@@ -32,9 +32,9 @@ html {
   background-color: rgba(55, 55, 55, 0.4);
 }
 html body {
-  padding: inherit;
   -webkit-text-size-adjust: auto;
   text-size-adjust: auto;
+  padding: inherit;
 }
 html body div.col-1 {
   width: 100%;
@@ -92,21 +92,14 @@ html body div.col-2 {
   left: 0;
   width: 100%;
   margin: 0;
-}
-html body div.col-2 * {
-  width: 100%;
-  margin: 0;
   padding: 0 0.5em;
-}
-html body div.col-2 > * {
-  padding: 0 0 0 1em;
-}
-html body div.col-2 > * > * {
-  padding: 0 0 0 2em;
 }
 html body div.col-2 p {
   width: 100%;
   text-indent: 1em;
+}
+html body div.col-2 ol {
+  margin-left: 2em;
 }
 html body div.col-2 dd {
   width: 100%;
