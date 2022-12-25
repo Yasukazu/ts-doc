@@ -25,40 +25,35 @@ html(lang="en")
       main#main-doc
         section#Document_Window_Navigator.main-section
           h2 Document / Window / Navigator
-          p
-            | Javascript can read and write HTML
-            strong Document
-            | . And also get information about the
-            strong Window
-            | rendered by the web browser. And also information about the 
-            u web browser itself
-            | (
-            strong Navigator
-            | ).
+          p Javascript can read and write: 
+          ol
+            li #[strong Document]: HTML itself
+            li #[strong Window]: output area from Document
+            li #[strong Navigator]: HTML interpreter (web browser, text reader or printer)
           article
             h3 Document interface:
             dl
-              dt Get an element of a document
-                s Read from Document
-              dd
-                | Javascript can get a specific element in the document using query selector function:
-                br
-                code.language-javascript
-                  | const 
-                  var win_nav_doc
-                  | = document.querySelector(&apos;#
-                  var win-nav-doc
-                  |&apos;);
-              dt Set a certain property of a document
-                s Write into Document
-              dd
-                | Javascript can set a certain property of the document like this:
-                br
-                code.lang-js
-                  var win_nav_doc
-                  |.textContent = &apos;
-                  var The Replaced text
-                  |&apos;;
+              div
+                dt Get an element of a document
+                  s Read from Document
+                dd
+                  | Javascript can get a specific element in the document using query selector function:
+                  br
+                  code.language-javascript
+                    | const 
+                    var win_nav_doc
+                    | = document.querySelector(&apos;#<var>win-nav-doc</var>&apos;);
+              div
+                dt Set a certain property of a document
+                  s Write into Document
+                dd
+                  | Javascript can set a certain property of the document like this:
+                  br
+                  code.lang-js
+                    var win_nav_doc
+                    |.textContent = &apos;
+                    var The Replaced text
+                    |&apos;;
             aside
               | Such Document APIs are like these(
               a(href='https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement') HTMLElement
