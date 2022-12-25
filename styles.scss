@@ -27,6 +27,8 @@ html {
 	overflow: auto;
 	background-color: rgba(55, 55, 55, 0.4);
 	body {
+		-webkit-text-size-adjust: auto;
+		text-size-adjust: auto;
 		padding: inherit;
         div.col-1 {
         	width: 100%;
