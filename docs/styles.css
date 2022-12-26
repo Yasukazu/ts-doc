@@ -11,7 +11,7 @@
 
 :root {
   font-size: 16px;
-  --hdr-h: 1.6rem;
+  --hdr-h: 2.2rem;
   --nav-w: 25vw;
 }
 
@@ -20,58 +20,48 @@
 }
 
 html {
-  font-size: 1rem;
   margin: 0.5em 0 0.5em -1em;
   padding: 0 0 0 1em;
   width: auto;
   height: auto;
-  border: none;
   color: black;
   line-height: 1rem;
   overflow: auto;
   background-color: rgba(55, 55, 55, 0.4);
-}
-html body {
   -webkit-text-size-adjust: auto;
   text-size-adjust: auto;
   padding: inherit;
 }
-html body div.col-1 {
+html details > summary {
+  border: thin solid gray;
+  border-radius: 0.3em;
+  margin: 0 1em;
+}
+html div.col-1 {
   width: 100%;
-}
-html body div.col-1 * {
-  z-index: 9;
   height: auto;
-  width: auto;
 }
-html body div.col-1 > header {
+html div.col-1 > header {
   background-color: #64646e;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 9;
   height: var(--hdr-h);
-  line-height: 1rem;
+  line-height: 1em;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
 }
-html body div.col-1 > header a#header-brand {
+html div.col-1 > header a#header-brand {
   color: lightgray;
 }
-html body div.col-1 > header nav {
+html div.col-1 > header nav {
   background-color: rgba(0, 0, 0, 0);
   padding: 0 1em;
 }
-html body div.col-1 > header nav > details {
-  border: thin solid yellow;
-  border-radius: 0.3em;
-}
-html body div.col-1 > header nav > details > summary {
-  color: white;
-  margin: 0 1em;
-}
-html body div.col-1 > header nav a {
+html div.col-1 > header nav a {
   z-index: 5;
   background-color: white;
   display: inline-block;
@@ -81,11 +71,11 @@ html body div.col-1 > header nav a {
   font-size: 80%;
   padding: 0.2em;
 }
-html body strong {
+html strong {
   padding: 0;
   display: inline;
 }
-html body div.col-2 {
+html div.col-2 {
   z-index: 1;
   position: absolute;
   top: var(--hdr-h);
@@ -94,53 +84,53 @@ html body div.col-2 {
   margin: 0;
   padding: 0 0.5em;
 }
-html body div.col-2 p {
+html div.col-2 p {
   width: 100%;
   text-indent: 1em;
 }
-html body div.col-2 ol {
+html div.col-2 ol {
   margin-left: 2em;
 }
-html body div.col-2 dd {
+html div.col-2 dd {
   width: 100%;
   text-indent: 1em;
 }
-html body div.col-2 section {
+html div.col-2 section {
   border-top: medium solid black;
   background-color: #c8c8c8;
 }
-html body div.col-2 article {
+html div.col-2 article {
   border-top: thin solid darkgray;
   background-color: #c8c8c8;
 }
-html body div[class|=col] {
+html div[class|=col] {
   width: 100%;
 }
-html body div[class|=col] h2 {
+html div[class|=col] h2 {
   margin: 0.5em 0;
   font-weight: bold;
   line-height: 1.4rem;
   font-size: 1.2rem;
 }
-html body div[class|=col] h3 {
+html div[class|=col] h3 {
   line-height: 1.2rem;
   font-size: 1rem;
 }
-html body h3 {
+html h3 {
   margin: 0.5em 0;
   font-weight: bold;
 }
-html body section > h2::before {
+html section > h2::before {
   content: "§";
   font-size: 80%;
   vertical-align: super;
 }
-html body article > h3::before {
+html article > h3::before {
   content: "†";
   font-size: 80%;
   vertical-align: super;
 }
-html body article code {
+html article code {
   display: block;
   margin-left: 0;
   width: 100%;
@@ -153,22 +143,22 @@ html body article code {
   font-family: Consolas, "Courier New", Courier, Monaco, monospace, serif;
   overflow: scroll;
 }
-html body dt {
+html dt {
   font-weight: bold;
   text-indent: 1em;
 }
-html body dt::after {
+html dt::after {
   content: ":";
 }
-html body dd {
+html dd {
   text-indent: 2em;
 }
-html body dd::before {
+html dd::before {
   content: "→";
 }
-html body details:before {
-  content: "(Click triangle below to show/hide details):";
+html summary:before {
+  content: "←(Click this triangle to show/hide details)Summary:";
   font-variant: small-caps;
   font-size: smaller;
-  color: yellow;
+  color: black;
 }

@@ -9,42 +9,41 @@
 }
 :root {
 	font-size: 16px;
-	--hdr-h: 1.6rem;
+	--hdr-h: 2.2rem;
 	--nav-w: 25vw;
 }
 :target {
 	scroll-margin-top: var(--hdr-h);
 }
 html {
-	font-size: 1rem;
 	margin: 0.5em 0 0.5em -1em;
 	padding: 0 0 0 1em;
 	width: auto;
 	height: auto;
-	border: none;
 	color: black;
 	line-height: 1rem;
 	overflow: auto;
 	background-color: rgba(55, 55, 55, 0.4);
-	body {
+		details > summary {
+			border: thin solid gray;
+			border-radius: 0.3em;
+				margin: 0 1em;
+		}
 		-webkit-text-size-adjust: auto;
 		text-size-adjust: auto;
 		padding: inherit;
         div.col-1 {
         	width: 100%;
-        	* {
-        		z-index: 9;
-        		height: auto;
-        		width: auto;
-        	}
+        	height: auto;
         	>header {
         		background-color: rgba(100, 100, 110, 1);
         		position: fixed;
         		top: 0;
         		left: 0;
         		right: 0;
+				z-index: 9;
         		height: var(--hdr-h);
-        		line-height: 1rem;
+        		line-height: 1em;
         		box-shadow: 0 0 5px 2px rgba(0,0,0,.1);
         		display: flex;
         		justify-content: space-between;
@@ -52,14 +51,7 @@ html {
         			color: lightgray;
         		}
     			nav {
-    				>details {
-    					border: thin solid yellow;
-    					border-radius: 0.3em;
-    					>summary {
-    						color: white;
-    						margin: 0 1em;
-    					}
-    				}
+
     				background-color: rgba(0,0,0,0);
     				padding: 0 1em;
     				a {
@@ -170,11 +162,10 @@ html {
         		content: "→";
         	}
         }
-		details:before {
-			content: "(Click triangle below to show/hide details):";
+		summary:before {
+			content: "←(Click this triangle to show/hide details)Summary:";
 			font-variant: small-caps;
 			font-size: smaller;
-			color: yellow;
+			color: black;
 		}
-    }
 }
